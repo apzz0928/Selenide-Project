@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>TestNG:  chrome Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>chrome Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>31/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Sep 27 18:15:07 KST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>229 seconds (229898 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='authMng_Selenide.Login()'><b>Login</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>2</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='gameAccountMng_Selenide.Login()'><b>Login</b><br>Test class: gameAccountMng_Selenide</td>
+<td></td>
+<td>3</td>
+<td>gameAccountMng_Selenide@6ea12c19</td></tr>
+<tr>
+<td title='gameMng_Selenide.Login()'><b>Login</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>3</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameAccountMng_Selenide.accountBlock()'><b>accountBlock</b><br>Test class: gameAccountMng_Selenide</td>
+<td></td>
+<td>26</td>
+<td>gameAccountMng_Selenide@6ea12c19</td></tr>
+<tr>
+<td title='gameAccountMng_Selenide.accountSearch()'><b>accountSearch</b><br>Test class: gameAccountMng_Selenide</td>
+<td></td>
+<td>6</td>
+<td>gameAccountMng_Selenide@6ea12c19</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityGroupMng_Member()'><b>authorityGroupMng_Member</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>1</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityGroupMng_Menu()'><b>authorityGroupMng_Menu</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>4</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityMenu_detailMenu_add()'><b>authorityMenu_detailMenu_add</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>2</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityMenu_detailMenu_del()'><b>authorityMenu_detailMenu_del</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>0</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityMenu_detailMenu_edit()'><b>authorityMenu_detailMenu_edit</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>2</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityMenu_detailMenu_menuOrder()'><b>authorityMenu_detailMenu_menuOrder</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>3</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityMenu_groupOrder()'><b>authorityMenu_groupOrder</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>5</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.authorityMenu_keywordSearch()'><b>authorityMenu_keywordSearch</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>0</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='gameMng_Selenide.burningEvent()'><b>burningEvent</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>6</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='authMng_Selenide.ctActionLog()'><b>ctActionLog</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>33</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.ctMember_addMember_add()'><b>ctMember_addMember_add</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>3</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.ctMember_addMember_edit()'><b>ctMember_addMember_edit</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>2</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.ctMember_addMember_resetPW_del()'><b>ctMember_addMember_resetPW_del</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>2</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='authMng_Selenide.groupListByAdmin()'><b>groupListByAdmin</b><br>Test class: authMng_Selenide</td>
+<td></td>
+<td>1</td>
+<td>authMng_Selenide@5afa04c</td></tr>
+<tr>
+<td title='gameMng_Selenide.ingameGuide()'><b>ingameGuide</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>8</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.ingameNotice_add()'><b>ingameNotice_add</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>5</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.ingameNotice_statusChange()'><b>ingameNotice_statusChange</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>6</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.kickUser()'><b>kickUser</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>2</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.limitDrop()'><b>limitDrop</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>7</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.mailout()'><b>mailout</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>2</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.onlineUser()'><b>onlineUser</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>1</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.pvpSchedule()'><b>pvpSchedule</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>12</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.semdMail()'><b>semdMail</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>7</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.serverStatus()'><b>serverStatus</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>7</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.slangWord()'><b>slangWord</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>19</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+<tr>
+<td title='gameMng_Selenide.systemMessage()'><b>systemMessage</b><br>Test class: gameMng_Selenide</td>
+<td></td>
+<td>10</td>
+<td>gameMng_Selenide@6a024a67</td></tr>
+</table><p>
+</body>
+</html>

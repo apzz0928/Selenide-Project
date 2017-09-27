@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <parameter name="browser" value="chrome"/>
+  <test name="firefox Test">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="authMng_Selenide"/>
+      <class name="gameAccountMng_Selenide"/>
+      <class name="gameMng_Selenide"/>
+    </classes>
+  </test> <!-- firefox Test -->
+  <test name="chrome Test">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="authMng_Selenide"/>
+      <class name="gameAccountMng_Selenide"/>
+      <class name="gameMng_Selenide"/>
+    </classes>
+  </test> <!-- chrome Test -->
+</suite> <!-- Failed suite [Suite] -->
