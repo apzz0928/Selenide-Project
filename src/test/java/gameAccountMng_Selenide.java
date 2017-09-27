@@ -168,9 +168,9 @@ public class gameAccountMng_Selenide {
             $("li[data-key='0804']").click();
             $(".menu-title").waitUntil(text("전체 메뉴"), 3000);
             $(".fa-chevron-down", 1).click();
-            $("li[data-key='0" + i + "']").shouldBe(appear).click();
             $("textarea[name=blockForm]").setValue(accountKey + ", 2, 1, 0");
             $("input[name=remark]").setValue("ak:" + accountKey + ", job:2, sev:1, time:0, "+ TestBrowser);
+            $("li[data-key='0" + i + "']").shouldBe(appear).click();
             js("document.querySelector('.ac_btn_text').click();");
             //$(".ac_btn_text", 0).click();       
             switch(i){
