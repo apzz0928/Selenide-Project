@@ -74,7 +74,7 @@ public class test_Selenide {
         $(".uid_test_btn_ok").click();
         $(".uid_login_login").click();
         confirm("아이디를 입력해주세요");
-        $(".uid_login_id").setValue("webqa01");
+        $(".uid_login_id").setValue("apzz0928");
         $(".uid_login_login").click();
         confirm("비밀번호를 입력해주세요.");
         $(".uid_login_password").setValue("qordlf13");
@@ -84,9 +84,10 @@ public class test_Selenide {
         $(".uid_login_login").click();
         $(".btn-logout").click();
     }
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void ajaxSample() {
         open(baseUrl);
+        refresh();
         js("");
         $(".uid_login_login").waitUntil(appear, 5000);
         $(".uid_cookie_checkbox").click();
@@ -98,6 +99,30 @@ public class test_Selenide {
         $("#txtBoardSearchKeyword").setValue("1234");
         $("#btnBoardSearchSearch").click();
         $("#txtBoardSearchKeyword").shouldHave(value("1234"));
+    }
+	//@Test(priority = 2)
+	public void getPageUrlTitleSource() {
+        open(baseUrl);
+        System.out.println(url());
+        System.out.println(title());
+        //System.out.println(source());
+    }
+	@Test(priority = 3)
+	public void jqueryTest() throws InterruptedException {
+        open("http://naver.com");
+        String sel = "document.createElement('SCRIPT');";
+        String sel2 = "sel.setAttribute('src', 'https://code.jquery.com/jquery-1.12.4.js');";
+        String sel3 = "document.querySelector('body').appendChild(sel);";
+        //js("var sel = document.createElement('SCRIPT');");
+        js(sel);
+        Thread.sleep(2000);
+        js(sel2);
+        //js("sel.setAttribute('src', 'https://code.jquery.com/jquery-1.12.4.js');");
+        Thread.sleep(2000);
+        js(sel3);
+        //js("document.querySelector('body').appendChild(sel);");
+        Thread.sleep(2000);
+        js("alert($('.ico_search_submit'))");
     }
 	@AfterClass
 	public void afterTest() {
