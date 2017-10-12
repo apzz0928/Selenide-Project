@@ -5,17 +5,13 @@
   <test name="firefox Test">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="authMng_Selenide"/>
-      <class name="gameAccountMng_Selenide"/>
-      <class name="gameMng_Selenide"/>
+      <class name="test_Selenide"/>
     </classes>
   </test> <!-- firefox Test -->
   <test name="chrome Test">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="authMng_Selenide"/>
-      <class name="gameAccountMng_Selenide"/>
-      <class name="gameMng_Selenide"/>
+      <class name="test_Selenide"/>
     </classes>
   </test> <!-- chrome Test -->
 </suite> <!-- Failed suite [Suite] -->

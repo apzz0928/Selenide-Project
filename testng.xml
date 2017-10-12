@@ -4,17 +4,19 @@
   <test name="firefox Test">
   	<parameter name="browser" value="firefox" />
     <classes>
-      <class name="authMng_Selenide"/>
+      <!-- <class name="authMng_Selenide"/>
       <class name="gameAccountMng_Selenide"/>
-      <class name="gameMng_Selenide"/>
+      <class name="gameMng_Selenide"/> -->
+            <class name="test_Selenide"/>
     </classes>
   </test> <!-- Test -->
   <test name="chrome Test">
   	<parameter name="browser" value="chrome" />
     <classes>
-      <class name="authMng_Selenide"/>
+      <!-- <class name="authMng_Selenide"/>
       <class name="gameAccountMng_Selenide"/>
-      <class name="gameMng_Selenide"/>
+      <class name="gameMng_Selenide"/> -->
+      <class name="test_Selenide"/>
     </classes>
   </test>
 </suite> <!-- Suite -->
