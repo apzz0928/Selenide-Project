@@ -84,7 +84,7 @@ public class test_Selenide {
         $(".uid_login_login").click();
         $(".btn-logout").click();
     }
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void ajaxSample() {
         open(baseUrl);
         refresh();
@@ -99,30 +99,31 @@ public class test_Selenide {
         $("#txtBoardSearchKeyword").setValue("1234");
         $("#btnBoardSearchSearch").click();
         $("#txtBoardSearchKeyword").shouldHave(value("1234"));
+        System.out.println("ajaxSample --- end ---");
     }
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void getPageUrlTitleSource() {
         open(baseUrl);
         System.out.println(url());
         System.out.println(title());
         //System.out.println(source());
+        System.out.println("getPageUrlTitleSource --- end ---");
     }
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void jqueryTest() throws InterruptedException {
         open("http://naver.com");
-        String sel = "document.createElement('SCRIPT');";
+        String sel = "sel = document.createElement('SCRIPT');";
         String sel2 = "sel.setAttribute('src', 'https://code.jquery.com/jquery-1.12.4.js');";
         String sel3 = "document.querySelector('body').appendChild(sel);";
         //js("var sel = document.createElement('SCRIPT');");
         js(sel);
         Thread.sleep(2000);
         js(sel2);
-        //js("sel.setAttribute('src', 'https://code.jquery.com/jquery-1.12.4.js');");
         Thread.sleep(2000);
         js(sel3);
-        //js("document.querySelector('body').appendChild(sel);");
         Thread.sleep(2000);
-        js("alert($('.ico_search_submit'))");
+        js("alert($('.ico_search_submit'));");
+        Thread.sleep(10000);
     }
 	@AfterClass
 	public void afterTest() {
