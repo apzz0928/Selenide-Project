@@ -83,7 +83,7 @@ public class test_Selenide {
         $(".uid_login_login").click();
         $(".btn-logout").click();
     }
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void ajaxSample() {
         open(baseUrl);
         refresh();
@@ -100,7 +100,7 @@ public class test_Selenide {
         $("#txtBoardSearchKeyword").shouldHave(value("1234"));
         System.out.println("ajaxSample --- end ---");
     }
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void getPageUrlTitleSource() {
         open(baseUrl);
         System.out.println(url());
@@ -108,7 +108,14 @@ public class test_Selenide {
         //System.out.println(source());
         System.out.println("getPageUrlTitleSource --- end ---");
     }
-	//@Test(priority = 3)
+	@Test(priority = 3)
+	public void promptTest() throws InterruptedException {
+        open("file:///C:/Users/Administrator/Desktop/Untitled-1.html");
+        $(".prompt").click();
+        prompt("값을 입력해주세요", "1234");
+        Thread.sleep(5000);
+    }
+	//@Test(priority = 99)
 	public void jqueryTest() throws InterruptedException {
         open("http://naver.com");
         String sel = "sel = document.createElement('SCRIPT');";

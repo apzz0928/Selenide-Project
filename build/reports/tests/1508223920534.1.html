@@ -1,0 +1,339 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CT Login</title>
+    <link href="https://rct-d-p.astorm.com/static/css/act_framework/act_theme_default.css" rel="stylesheet">
+    
+    <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+    <link href="https://rct-d-p.astorm.com/static/css/act_framework/typography.css" rel="stylesheet">
+    <link href="https://rct-d-p.astorm.com/static/css/act_framework/container.css" rel="stylesheet">
+    <style>
+        body { padding:0; }
+        legend { display:none; }
+        fieldset { border:0; padding:0; }
+        .ac_container_page { max-width:400px; margin:0 auto; }
+    </style>
+    <script src="https://rct-d-p.astorm.com/static/js/jquery-1.9.1.min.js"></script>
+    <script src="https://rct-d-p.astorm.com/static/js/astorm/astorm.js"></script>
+    <script src="https://rct-d-p.astorm.com/static/js/act_framework/AcFramework.js"></script>
+    <script src="https://rct-d-p.astorm.com/static/js/act_framework/AcCtrlButton.js"></script>
+    <script src="https://rct-d-p.astorm.com/static/js/act_framework/AcCtrlCheckbox.js"></script>
+    <script src="https://rct-d-p.astorm.com/static/js/act_framework/AcCtrlRadiobox.js"></script>
+    <script src="https://rct-d-p.astorm.com/static/js/act_framework/AcCtrlTextbox.js"></script>
+</head>
+<body>
+<div id="AcFrameworkLoader" style="display: none;"><p>Loading...</p></div>
+<div id="AcFrameworkArea" style="display: block;">
+    <div class="ac_initalize_area_login" id="ac_layout_content_inner">
+        <div class="ac_container_page">
+            <div class="ac_container_page_header">
+                <h1>CT Login</h1>
+            </div>
+            <div class="ac_container_page_body">
+                <div class="ac_container_tab">
+                    <div class="ac_container_tab_header">
+                        <ul class="uid_login_type">
+                            <li class="ac_container_tab_selected"><a href="/login/form.ct?type=ldap">LDAP</a></li>
+                            <li><a href="/login/form.ct?type=internal">INTERNAL</a></li>
+                        </ul>
+                    </div>
+                    <div class="ac_container_tab_body">
+                        <p class="ac_container_paragraph au_text_color_danger au_space_bottom_10" id="loginFormMessage"></p>
+                        <div class="uid_tab_cont" id="tabContentLdap">
+                            <form name="ldap_login_form" action="/j_security_check" method="POST">
+                                <fieldset>
+                                    <legend>LDAP</legend>
+                                    <div class="ac_container_section">
+                                        <div class="ac_container_section_body">
+                                            <div class="ac_container_table_view">
+                                                <table border="1">
+                                                    <caption>LDAP</caption>
+                                                    <colgroup>
+                                                        <col style="width: 100px;">
+                                                        <col style="width: auto;">
+                                                    </colgroup>
+                                                    <tbody class="au_text_center">
+                                                    <tr>
+                                                        <th scope="row">User ID</th>
+                                                        <td>
+                                                            <div class="ac_ctrl am_textbox  uid_ldap_user_id at_default au_flex" id="j_username" acctrlindex="0" acctrlid="AcCtrlTextBox">
+   <div class="ac_ctrl_textbox_table">
+       <div class="ac_ctrl_textbox_cell ac_input_cell"><input name="j_username" class="ac_input au_text_left" type="text" placeholder="User ID" value=""></div>
+           <div class="ac_ctrl_textbox_cell ac_icon_cell" style="display: none;">
+           <button tabindex="-1" type="button"><i class="fa fa-times"></i></button>
+       </div>
+   </div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Password</th>
+                                                        <td>
+                                                            <div class="ac_ctrl am_textbox at_default au_flex" id="j_password" acctrlindex="2" acctrlid="AcCtrlTextBox">
+   <div class="ac_ctrl_textbox_table">
+       <div class="ac_ctrl_textbox_cell ac_input_cell"><input name="j_password" class="ac_input au_text_left" type="password" placeholder="Password" value=""></div>
+           <div class="ac_ctrl_textbox_cell ac_icon_cell" style="display: none;">
+           <button tabindex="-1" type="button"><i class="fa fa-times"></i></button>
+       </div>
+   </div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="ac_container_section_footer">
+                                            <div class="ac_container_left">
+                                                <div class="ac_ctrl am_checkbox uid_login_rememberid at_default" acctrlindex="0" acctrlid="acCtrlCheck" ac-value="false">
+    <div class="ac_check_btn"><i class="fa fa-square-o"></i></div>
+    <div class="ac_check_content">Save ID</div>
+    <input class="ac_hidden_input" type="checkbox" value="remember-me"></div>
+                                            </div>
+                                            <div class="ac_container_right ">
+                                                <div class="ac_ctrl am_btn uid_ldap_login_submit_btn au_auto at_skin_c" acctrlindex="0" acctrlid="acCtrlButton">
+<button class="ac_btn_inner" type="submit"><div class="ac_btn_table"><div class="ac_btn_row"><div class="ac_btn_cell"><span class="ac_btn_text au_text_center">Login</span></div></div></div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <div class="uid_tab_cont" id="tabContentInfoInternal" style="display: none;">
+                            <form name="internal_login_form" action="/login/internal/login" method="POST">
+                                <fieldset>
+                                    <legend>INTERNAL</legend>
+                                    <div class="ac_container_section">
+                                        <div class="ac_container_section_body">
+                                            <div class="ac_container_table_view">
+                                                <table border="1">
+                                                    <caption>INTERNAL</caption>
+                                                    <colgroup>
+                                                        <col style="width: 100px;">
+                                                        <col style="width: auto;">
+                                                    </colgroup>
+                                                    <tbody class="au_text_center">
+                                                    <tr>
+                                                        <th scope="row">User ID</th>
+                                                        <td>
+                                                            <div class="ac_ctrl am_textbox  uid_internal_user_id at_default au_flex" id="internalId" acctrlindex="1" acctrlid="AcCtrlTextBox">
+   <div class="ac_ctrl_textbox_table">
+       <div class="ac_ctrl_textbox_cell ac_input_cell"><input name="id" class="ac_input au_text_left" type="text" placeholder="User ID" value=""></div>
+           <div class="ac_ctrl_textbox_cell ac_icon_cell" style="display: none;">
+           <button tabindex="-1" type="button"><i class="fa fa-times"></i></button>
+       </div>
+   </div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Password</th>
+                                                        <td>
+                                                            <div class="ac_ctrl am_textbox at_default au_flex" id="internalPassword" acctrlindex="3" acctrlid="AcCtrlTextBox">
+   <div class="ac_ctrl_textbox_table">
+       <div class="ac_ctrl_textbox_cell ac_input_cell"><input name="password" class="ac_input au_text_left" type="password" placeholder="Password" value=""></div>
+           <div class="ac_ctrl_textbox_cell ac_icon_cell" style="display: none;">
+           <button tabindex="-1" type="button"><i class="fa fa-times"></i></button>
+       </div>
+   </div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="display: none;">
+                                                        <th scope="row">Password Confirm</th>
+                                                        <td>
+                                                            <div class="ac_ctrl am_textbox at_default au_flex" id="internalConfirmPassword" acctrlindex="4" acctrlid="AcCtrlTextBox">
+   <div class="ac_ctrl_textbox_table">
+       <div class="ac_ctrl_textbox_cell ac_input_cell"><input name="confirmPassword" class="ac_input au_text_left" type="password" placeholder="Password Confirm" value=""></div>
+           <div class="ac_ctrl_textbox_cell ac_icon_cell" style="display: none;">
+           <button tabindex="-1" type="button"><i class="fa fa-times"></i></button>
+       </div>
+   </div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="ac_container_section_footer">
+                                            <div class="ac_container_left">
+                                                <div class="ac_ctrl am_checkbox uid_login_internal_rememberid at_default" acctrlindex="1" acctrlid="acCtrlCheck" ac-value="false">
+    <div class="ac_check_btn"><i class="fa fa-square-o"></i></div>
+    <div class="ac_check_content">Save ID</div>
+    <input class="ac_hidden_input" type="checkbox" value="remember-me"></div>
+                                                <div class="ac_ctrl am_btn au_auto at_skin_c" id="cancelInitPassword" acctrlindex="2" acctrlid="acCtrlButton">
+<a class="ac_btn_inner" href="/login/form.ct"><div class="ac_btn_table"><div class="ac_btn_row"><div class="ac_btn_cell"><span class="ac_btn_text au_text_center">Login with another ID</span></div></div></div></a></div>
+                                            </div>
+                                            <div class="ac_container_right">
+                                                <div class="ac_ctrl am_btn uid_internal_login_submit_btn au_auto at_skin_c" acctrlindex="1" acctrlid="acCtrlButton">
+<button class="ac_btn_inner" type="submit"><div class="ac_btn_table"><div class="ac_btn_row"><div class="ac_btn_cell"><span class="ac_btn_text au_text_center">Login</span></div></div></div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // hide ac framework loader
+        AC.Common.loadComplete();
+    })();
+    // ## AC Control 자동 생성
+    (function () {
+        AC.Controls.Initializer.initialize($(".ac_initalize_area_login"));
+    })();
+</script>
+
+<script>
+    // ## LDAP
+    (function(){
+        // 아이디 저장
+        window.lLdapSaveIdCtrl = AC.Controls.getControl($('.uid_login_rememberid')); // 아이디 저장 컨트롤
+        var lLdapSaveIdBtn = lLdapSaveIdCtrl.getElement().find('.ac_check_btn'); // 아이디 저장 버튼
+        if(Astorm.Objects.Cookie.get("ctldaploginrememberid")){
+            lLdapSaveIdCtrl.setCheck();
+            lLdapSaveIdCtrl.setValue(true);
+        } else {
+            lLdapSaveIdCtrl.removeCheck();
+            lLdapSaveIdCtrl.setValue(false);
+        }
+        $(document).on('click', lLdapSaveIdBtn, function(){
+            if(lLdapSaveIdCtrl.getCheck() === false) {
+                Astorm.Objects.Cookie.remove("ctldaploginid");
+                Astorm.Objects.Cookie.remove("ctldaploginrememberid");
+            }
+        });
+        // 아이디
+        window.lLdapIdCtrl = AC.Controls.getControl($('.uid_ldap_user_id')); // 아이디 컨트롤
+        if(Astorm.Objects.Cookie.get("ctldaploginid")){
+            lLdapIdCtrl.setValue(Astorm.Objects.Cookie.get("ctldaploginid"));
+        }
+        // 로그인
+        var lLdapLoginBtnCtrl = AC.Controls.getControl($('.uid_ldap_login_submit_btn')); // 로그인 버튼 컨트롤
+        var lLdapLoginBtn = lLdapLoginBtnCtrl.getElement(); // 로그인 버튼
+        $(document).on('click', lLdapLoginBtn, function(){
+            if(lLdapSaveIdCtrl.getCheck() === true) {
+                Astorm.Objects.Cookie.set("ctldaploginid", lLdapIdCtrl.getFormValue(), 60*60*24*30);
+                Astorm.Objects.Cookie.set("ctldaploginrememberid", "checked", 60*60*24*30);
+            }
+        });
+    })();
+
+    // ## Internal
+    (function(){
+        // 아이디 저장
+        window.lInternalSaveIdCtrl = AC.Controls.getControl($('.uid_login_internal_rememberid')); // 아이디 저장 컨트롤
+        var lInternalSaveIdBtn = lInternalSaveIdCtrl.getElement().find('.ac_check_btn'); // 아이디 저장 버튼
+        if(Astorm.Objects.Cookie.get("ctinternalloginrememberid")){
+            lInternalSaveIdCtrl.setCheck();
+            lInternalSaveIdCtrl.setValue(true);
+        } else {
+            lInternalSaveIdCtrl.removeCheck();
+            lInternalSaveIdCtrl.setValue(false);
+        }
+        $(document).on('click', lInternalSaveIdBtn, function(){
+            if(lInternalSaveIdCtrl.getCheck() === false) {
+                Astorm.Objects.Cookie.remove("ctinternalloginid");
+                Astorm.Objects.Cookie.remove("ctinternalloginrememberid");
+            }
+        });
+        // 아이디
+        window.lInternalIdCtrl = AC.Controls.getControl($('.uid_internal_user_id')); // 아이디 컨트롤
+        if(Astorm.Objects.Cookie.get("ctinternalloginid")){
+            lInternalIdCtrl.setValue(Astorm.Objects.Cookie.get("ctinternalloginid"));
+        }
+        // 로그인
+        var lInternalLoginBtnCtrl = AC.Controls.getControl($('.uid_internal_login_submit_btn')); // 로그인 버튼 컨트롤
+        var lInternalLoginBtn = lInternalLoginBtnCtrl.getElement(); // 로그인 버튼
+        $(document).on('click', lInternalLoginBtn, function(){
+            if(lInternalSaveIdCtrl.getCheck() === true) {
+                Astorm.Objects.Cookie.set("ctinternalloginid", lInternalIdCtrl.getFormValue(), 60*60*24*30);
+                Astorm.Objects.Cookie.set("ctinternalloginrememberid", "checked", 60*60*24*30);
+            }
+        });
+    })();
+</script>
+
+<script>
+    // 데이터별  에러 메시지 출력, 아이디 저장 관련 UI 적용
+    (function(){
+        var lType = "";
+        var lStatus = "";
+
+        if(lType==="internal") {
+            $(".uid_login_type > li:eq(1) > a").closest('li').addClass('ac_container_tab_selected').siblings().removeClass('ac_container_tab_selected');
+            $("#tabContentLdap").hide();
+            $("#tabContentInfoInternal").show();
+
+            switch(lStatus) {
+                case "fail":
+                    $("#loginFormMessage").html("Login Failed.<br/> Please check the ID and password.");
+                    break;
+                case "id":
+                    $("#loginFormMessage").html("Input ID");
+                    break;
+                case "password":
+                    $("#loginFormMessage").html("Input password");
+                    break;
+                case "confirmPassword":
+                    $("#loginFormMessage").html("The password was initialized for new value.<br/>Input new password.<br>(Re-type the password for confirming)");
+                    AC.Controls.getControl($('#internalConfirmPassword')).getElement().closest('tr').show();
+                    AC.Controls.getControl($('#cancelInitPassword')).getElement().show();
+                    break;
+                case "confirmPasswordFail":
+                    $("#loginFormMessage").html("The new password cannot be set.<br/> The values from 'password' and 'confirm password' do not match each other.");
+                    AC.Controls.getControl($('#internalConfirmPassword')).getElement().closest('tr').show();
+                    AC.Controls.getControl($('#cancelInitPassword')).getElement().show();
+                    break;
+                case "newPassword":
+                    $("#loginFormMessage").html("The new password is successfully set to use.<br/>Try login with new password.");
+                    break;
+                case "confirmPasswordReject":
+                    $("#loginFormMessage").html("The password cannot be set for this user ID<br/>Consult with administrator to initialize the password.");
+                    break;
+                default :
+                    break;
+            }
+
+            if(Astorm.Objects.Cookie.get("ctinternalloginrememberid")==="checked") {
+                AC.Controls.getControl($('.uid_login_rememberid')).setCheck();
+                AC.Controls.getControl($('#internalId')).setValue(Astorm.Objects.Cookie.get("ctinternalloginid"));
+            } else {
+                AC.Controls.getControl($('.uid_login_rememberid')).removeCheck();
+            }
+        } else {
+            switch(lStatus) {
+                case "fail":
+                    $("#loginFormMessage").html("Login Failed.<br/> Please check the ID and password.");
+                    break;
+                case "id":
+                    $("#loginFormMessage").html("Input ID");
+                    break;
+                case "password":
+                    $("#loginFormMessage").html("Input password");
+                    break;
+                default :
+                    break;
+            }
+            if(Astorm.Objects.Cookie.get("ctldaploginrememberid")==="checked") {
+                lLdapSaveIdCtrl.setCheck();
+                lLdapSaveIdCtrl.setValue(true);
+                lLdapSaveIdCtrl.setValue(Astorm.Objects.Cookie.get("ctldaploginid"));
+            } else {
+                lLdapSaveIdCtrl.setValue(false);
+                lLdapSaveIdCtrl.removeCheck();
+            }
+        }
+    })();
+</script>
+
+</body></html>

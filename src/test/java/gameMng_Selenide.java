@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
@@ -45,6 +46,13 @@ public class gameMng_Selenide {
   		} else if(browser.equals("firefox")) {
   			TestBrowser = "firefox";
   			cap = DesiredCapabilities.firefox();
+	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
+	        WebDriverRunner.setWebDriver(driver);
+	  		driver.manage().window().setSize(new Dimension(1600, 1400));
+  		} else if(browser.equals("internetExplorer")) {
+  			TestBrowser = "internetExplorer";
+  			cap = DesiredCapabilities.internetExplorer();
+  			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
 	        WebDriverRunner.setWebDriver(driver);
 	  		driver.manage().window().setSize(new Dimension(1600, 1400));
