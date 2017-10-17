@@ -1,7 +1,5 @@
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -32,6 +30,7 @@ public class test_Selenide {
 		baseUrl = "http://www.herowarz.com/index.main?c=n";
 		nodeUrl = "http://10.10.105.228:4444/wd/hub";
   		
+		
   		String urlToRemoteWD = nodeUrl;
   		DesiredCapabilities cap;
   		ScreenShooter.captureSuccessfulTests = false;
