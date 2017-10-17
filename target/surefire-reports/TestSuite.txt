@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.705 s <<< FAILURE! - in TestSuite
-alertSample(test_Selenide)  Time elapsed: 6.108 s  <<< FAILURE!
-com.codeborne.selenide.ex.DialogTextMismatch: 
-
-Actual: 
-Expected: 비밀번호를 입력해주세요.
-	at test_Selenide.alertSample(test_Selenide.java:88)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.998 s - in TestSuite

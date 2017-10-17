@@ -8,16 +8,4 @@
       <class name="test_Selenide"/>
     </classes>
   </test> <!-- internetExplorer Test -->
-  <test name="internetExplorer Test(failed)">
-    <parameter name="browser" value="internetExplorer"/>
-    <classes>
-      <class name="test_Selenide">
-        <methods>
-          <include name="alertSample"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- test_Selenide -->
-    </classes>
-  </test> <!-- internetExplorer Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

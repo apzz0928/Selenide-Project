@@ -52,7 +52,9 @@ public class gameMng_Selenide {
   		} else if(browser.equals("internetExplorer")) {
   			TestBrowser = "internetExplorer";
   			cap = DesiredCapabilities.internetExplorer();
-  			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+  			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true); //IE 실행을 위한 보안 관련 설정 임시 변경
+  			cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false); //ie text 입력 속도 향상을 위한 부분
+  			cap.setCapability("requireWindowFocus", true); //ie text 입력 속도 향상을 위한 부분
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
 	        WebDriverRunner.setWebDriver(driver);
 	  		driver.manage().window().setSize(new Dimension(1600, 1400));

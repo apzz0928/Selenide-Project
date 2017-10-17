@@ -50,8 +50,9 @@ public class test_Selenide {
   		} else if(browser.equals("internetExplorer")) {
   			TestBrowser = "internetExplorer";
   			cap = DesiredCapabilities.internetExplorer();
-  			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
-  			cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
+  			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true); //IE 실행을 위한 보안 관련 설정 임시 변경
+  			cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false); //ie text 입력 속도 향상을 위한 부분
+  			cap.setCapability("requireWindowFocus", true); //ie text 입력 속도 향상을 위한 부분
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
 	        WebDriverRunner.setWebDriver(driver);
 	  		driver.manage().window().setSize(new Dimension(1600, 1400));
@@ -82,16 +83,16 @@ public class test_Selenide {
         //$(".uid_test_btn_ok").click();
         $(".uid_login_login").click();
         confirm("아이디를 입력해주세요");
-        //$(".uid_login_id").setValue("apzz0928");
-        js("$('.uid_login_id').prop('value', 'apzz0928')");
-        $(".uid_login_login").click();
-        confirm("비밀번호를 입력해주세요.");
-        //$(".uid_login_password").setValue("qordlf13");
-        js("$('.uid_login_password').prop('value', 'qordlf13')");
-        $(".uid_login_login").click();
-        confirm("아이디 또는 비밀번호가 일치하지 않습니다.");
-//        $(".uid_login_password").setValue("qordlf12");
-        js("$('.uid_login_password').prop('value', 'qordlf12')");
+        $(".uid_login_id").setValue("apzz0928");
+        //js("$('.uid_login_id').prop('value', 'apzz0928')");
+//        $(".uid_login_login").click();
+//        confirm("비밀번호를 입력해주세요.");
+//        $(".uid_login_password").setValue("qordlf13");
+        //js("$('.uid_login_password').prop('value', 'qordlf13')");
+//        $(".uid_login_login").click();
+//        confirm("아이디 또는 비밀번호가 일치하지 않습니다.");
+        $(".uid_login_password").setValue("qordlf12");
+        //js("$('.uid_login_password').prop('value', 'qordlf12')");
         $(".uid_login_login").click();
         $(".btn-logout").click();
     }
