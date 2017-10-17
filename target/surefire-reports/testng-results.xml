@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="15669" started-at="2017-10-17T07:39:49Z" finished-at="2017-10-17T07:40:05Z">
+  <suite name="Suite" duration-ms="22063" started-at="2017-10-17T09:45:51Z" finished-at="2017-10-17T09:46:13Z">
     <groups>
     </groups>
-    <test name="internetExplorer Test" duration-ms="15669" started-at="2017-10-17T07:39:49Z" finished-at="2017-10-17T07:40:05Z">
+    <test name="internetExplorer Test" duration-ms="22063" started-at="2017-10-17T09:45:51Z" finished-at="2017-10-17T09:46:13Z">
       <class name="test_Selenide">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_Selenide@97e1986]" name="beforeTest" is-config="true" duration-ms="2909" started-at="2017-10-17T16:39:49Z" finished-at="2017-10-17T16:39:52Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_Selenide@97e1986]" name="beforeTest" is-config="true" duration-ms="3870" started-at="2017-10-17T18:45:51Z" finished-at="2017-10-17T18:45:54Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="alertSample()[pri:0, instance:test_Selenide@97e1986]" name="alertSample" duration-ms="11809" started-at="2017-10-17T16:39:52Z" finished-at="2017-10-17T16:40:04Z">
+        <test-method status="PASS" signature="alertSample()[pri:0, instance:test_Selenide@97e1986]" name="alertSample" duration-ms="17296" started-at="2017-10-17T18:45:54Z" finished-at="2017-10-17T18:46:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alertSample -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_Selenide@97e1986]" name="afterTest" is-config="true" duration-ms="944" started-at="2017-10-17T16:40:04Z" finished-at="2017-10-17T16:40:05Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_Selenide@97e1986]" name="afterTest" is-config="true" duration-ms="890" started-at="2017-10-17T18:46:12Z" finished-at="2017-10-17T18:46:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

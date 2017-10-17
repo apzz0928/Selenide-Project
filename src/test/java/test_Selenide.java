@@ -79,18 +79,16 @@ public class test_Selenide {
         open(baseUrl);
         js("");
         $(".uid_login_login").waitUntil(appear, 5000);
-        //$(".uid_cookie_checkbox").click();
-        //$(".uid_test_btn_ok").click();
+        $(".uid_cookie_checkbox").click();
+        $(".uid_test_btn_ok").click();
         $(".uid_login_login").click();
-        confirm("아이디를 입력해주세요");
+        dismiss("아이디를 입력해주세요");
         $(".uid_login_id").setValue("apzz0928");
-        //js("$('.uid_login_id').prop('value', 'apzz0928')");
-//        $(".uid_login_login").click();
-//        confirm("비밀번호를 입력해주세요.");
-//        $(".uid_login_password").setValue("qordlf13");
-        //js("$('.uid_login_password').prop('value', 'qordlf13')");
-//        $(".uid_login_login").click();
-//        confirm("아이디 또는 비밀번호가 일치하지 않습니다.");
+        $(".uid_login_login").click();
+        dismiss("비밀번호를 입력해주세요.");
+        $(".uid_login_password").setValue("qordlf13");
+        $(".uid_login_login").click();
+        confirm("아이디 또는 비밀번호가 일치하지 않습니다.");
         $(".uid_login_password").setValue("qordlf12");
         //js("$('.uid_login_password').prop('value', 'qordlf12')");
         $(".uid_login_login").click();
@@ -124,8 +122,9 @@ public class test_Selenide {
 	//@Test(priority = 3)
 	public void promptTest() throws InterruptedException {
         open("file:///C:/Users/Administrator/Desktop/Untitled-1.html");
-        $(".prompt").click();
-        prompt("값을 입력해주세요", "1234"); // 4.7에서 prompt(); 메소드 추가됨
+        $(".alert").click();
+        confirm("경고창입니다.");
+        //prompt("값을 입력해주세요", "1234"); // 4.7에서 prompt(); 메소드 추가됨
         Thread.sleep(5000);
     }
 	//@Test(priority = 99)
