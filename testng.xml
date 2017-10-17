@@ -22,9 +22,10 @@
   <test name="internetExplorer Test">
   	<parameter name="browser" value="internetExplorer" />
     <classes>
-      <class name="authMng_Selenide"/>
+<!--       <class name="authMng_Selenide"/> -->
 <!--       <class name="gameAccountMng_Selenide"/> -->
 <!--       <class name="gameMng_Selenide"/> -->
+      <class name="test_Selenide"/>
     </classes>
   </test>
 </suite> <!-- Suite -->
