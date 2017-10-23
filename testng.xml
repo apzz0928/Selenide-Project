@@ -25,7 +25,8 @@
 <!--       <class name="authMng_Selenide"/> -->
 <!--       <class name="gameAccountMng_Selenide"/> -->
 <!--       <class name="gameMng_Selenide"/> -->
-      <class name="test_Selenide"/>
+<!--       <class name="test_Selenide"/> -->
+      <class name="test_herowarz"/>
     </classes>
   </test>
 </suite> <!-- Suite -->

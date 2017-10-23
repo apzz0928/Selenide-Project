@@ -21,7 +21,7 @@ import static com.codeborne.selenide.WebDriverRunner.*;
 import com.codeborne.selenide.testng.ScreenShooter;
 
 
-public class test_Selenide {
+public class test_herowarz {
 	private static String baseUrl, nodeUrl;
 	private static String TestBrowser;
 	
@@ -75,7 +75,7 @@ public class test_Selenide {
 		} 
 	}
 	@Test(priority = 0)
-	public void alertSample() {
+	public void login() {
         open(baseUrl);
         js("");
         $(".uid_login_login").waitUntil(appear, 5000);
@@ -91,56 +91,16 @@ public class test_Selenide {
         confirm("아이디 또는 비밀번호가 일치하지 않습니다.");
         $(".uid_login_password").setValue("qordlf12");
         $(".uid_login_login").click();
-        $(".btn-logout").click();
     }
-	//@Test(priority = 1)
-	public void ajaxSample() {
-        open(baseUrl);
-        refresh();
-        js("");
-        $(".uid_login_login").waitUntil(appear, 5000);
-        $(".uid_cookie_checkbox").click();
-        $(".uid_test_btn_ok").click();
-        $(".uid_login_id").setValue("webqa01");
-        $(".uid_login_password").setValue("qordlf12");
-        $(".uid_login_login").click();
-        $(By.linkText("커뮤니티")).click();
-        $("#txtBoardSearchKeyword").setValue("1234");
-        $("#btnBoardSearchSearch").click();
-        $("#txtBoardSearchKeyword").shouldHave(value("1234"));
-        System.out.println("ajaxSample --- end ---");
-    }
-	//@Test(priority = 2)
-	public void getPageUrlTitleSource() {
-        open(baseUrl);
-        System.out.println(url());
-        System.out.println(title());
-        //System.out.println(source());
-        System.out.println("getPageUrlTitleSource --- end ---");
-    }
-	//@Test(priority = 3)
-	public void promptTest() throws InterruptedException {
-        open("file:///C:/Users/Administrator/Desktop/Untitled-1.html");
-        $(".alert").click();
-        confirm("경고창입니다.");
-        //prompt("값을 입력해주세요", "1234"); // 4.7에서 prompt(); 메소드 추가됨
-        Thread.sleep(5000);
-    }
-	//@Test(priority = 99)
-	public void jqueryTest() throws InterruptedException {
-        open("http://naver.com");
-        String sel = "sel = document.createElement('SCRIPT');";
-        String sel2 = "sel.setAttribute('src', 'https://code.jquery.com/jquery-1.12.4.js');";
-        String sel3 = "document.querySelector('body').appendChild(sel);";
-        //js("var sel = document.createElement('SCRIPT');");
-        js(sel);
-        Thread.sleep(2000);
-        js(sel2);
-        Thread.sleep(2000);
-        js(sel3);
-        Thread.sleep(2000);
-        js("alert($('.ico_search_submit'));");
-        Thread.sleep(10000);
+	@Test(priority = 1)
+	public void recentNotice() {
+        $(".recent").hover();
+        $(By.linkText("새소식")).click();
+        $(".uid_gameserver_btn").waitUntil(appear, 5000);
+        $(".cell-subject > a", 0).click();
+        $(".uid_gameserver_btn").waitUntil(appear, 5000);
+        $(".btn-white").click();
+        $(".uid_gameserver_btn").waitUntil(appear, 5000);
     }
 	@AfterClass
 	public void afterTest() {

@@ -1,4 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.406 s - in TestSuite
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 20.092 s <<< FAILURE! - in TestSuite
+login(test_herowarz)  Time elapsed: 6.862 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementNotFound: 
+Element not found {.uid_cookie_checkbox}
+Expected: visible
+	at test_herowarz.login(test_herowarz.java:82)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to find element with css selector == .uid_cookie_checkbox (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 353 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_141'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=false, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=true, initialBrowserUrl=http://localhost:34275/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 38787852-638b-4218-ada1-7f780fa2d9db
+*** Element info: {Using=css selector, value=.uid_cookie_checkbox}
+Command duration or timeout: 0 milliseconds
+	at test_herowarz.login(test_herowarz.java:82)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+	at test_herowarz.login(test_herowarz.java:82)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to find element with css selector == .uid_cookie_checkbox (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 353 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_141'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=false, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=true, initialBrowserUrl=http://localhost:34275/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 38787852-638b-4218-ada1-7f780fa2d9db
+*** Element info: {Using=css selector, value=.uid_cookie_checkbox}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: EventFiringWebDriver
+
+recentNotice(test_herowarz)  Time elapsed: 7.981 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should be visible {.uid_gameserver_btn}
+Element: '<a class="quick uid_gameserver_btn" href="#none" title="설치부터 모든 과정이 자동으로 이루어집니다." displayed:false></a>'
+	at test_herowarz.recentNotice(test_herowarz.java:99)
+

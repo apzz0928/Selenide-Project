@@ -5,7 +5,20 @@
   <test name="internetExplorer Test">
     <parameter name="browser" value="internetExplorer"/>
     <classes>
-      <class name="test_Selenide"/>
+      <class name="test_herowarz"/>
     </classes>
   </test> <!-- internetExplorer Test -->
+  <test name="internetExplorer Test(failed)">
+    <parameter name="browser" value="internetExplorer"/>
+    <classes>
+      <class name="test_herowarz">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="login"/>
+          <include name="recentNotice"/>
+        </methods>
+      </class> <!-- test_herowarz -->
+    </classes>
+  </test> <!-- internetExplorer Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
