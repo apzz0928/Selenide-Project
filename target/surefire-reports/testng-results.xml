@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="26141" started-at="2017-10-24T01:41:16Z" finished-at="2017-10-24T01:41:42Z">
+  <suite name="Suite" duration-ms="108349" started-at="2017-10-24T09:20:12Z" finished-at="2017-10-24T09:22:00Z">
     <groups>
     </groups>
-    <test name="internetExplorer Test" duration-ms="26141" started-at="2017-10-24T01:41:16Z" finished-at="2017-10-24T01:41:42Z">
+    <test name="internetExplorer Test" duration-ms="108349" started-at="2017-10-24T09:20:12Z" finished-at="2017-10-24T09:22:00Z">
       <class name="test_herowarz">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_herowarz@97e1986]" name="beforeTest" is-config="true" duration-ms="8989" started-at="2017-10-24T10:41:16Z" finished-at="2017-10-24T10:41:25Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_herowarz@69d9c55]" name="beforeTest" is-config="true" duration-ms="9719" started-at="2017-10-24T18:20:12Z" finished-at="2017-10-24T18:20:21Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:test_herowarz@97e1986]" name="login" duration-ms="16354" started-at="2017-10-24T10:41:25Z" finished-at="2017-10-24T10:41:41Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:test_herowarz@69d9c55]" name="login" duration-ms="16524" started-at="2017-10-24T18:20:21Z" finished-at="2017-10-24T18:20:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_herowarz@97e1986]" name="afterTest" is-config="true" duration-ms="790" started-at="2017-10-24T10:41:41Z" finished-at="2017-10-24T10:41:42Z">
+        <test-method status="PASS" signature="community()[pri:3, instance:test_herowarz@69d9c55]" name="community" duration-ms="80906" started-at="2017-10-24T18:20:38Z" finished-at="2017-10-24T18:21:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- community -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_herowarz@69d9c55]" name="afterTest" is-config="true" duration-ms="1193" started-at="2017-10-24T18:21:59Z" finished-at="2017-10-24T18:22:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

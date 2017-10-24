@@ -62,9 +62,6 @@ public class test_Selenide {
 	private static void js(String javaScriptSource) {
 	    executeJavaScript(javaScriptSource);
 	}
-	public void sw(String name) {
-		switchTo().window(name);
-	} 
   	public static void windowTitle(String windowTitle) { 
   		WebDriverRunner.getWebDriver();
   		Set<String> windows = getWebDriver().getWindowHandles();
@@ -109,7 +106,7 @@ public class test_Selenide {
         $("#txtBoardSearchKeyword").setValue("1234");
         $("#btnBoardSearchSearch").click();
         $("#txtBoardSearchKeyword").shouldHave(value("1234"));
-        System.out.println("ajaxSample --- end ---");
+        System.out.println(TestBrowser + "ajaxSample --- end ---");
     }
 	//@Test(priority = 2)
 	public void getPageUrlTitleSource() {
