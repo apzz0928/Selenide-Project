@@ -17,6 +17,7 @@
 <!--       <class name="gameAccountMng_Selenide"/> -->
 <!--       <class name="gameMng_Selenide"/> -->
 <!--       <class name="test_Selenide"/> -->
+<!--       <class name="test_herowarz"/> -->
 <!--     </classes> -->
 <!--   </test> -->
   <test name="internetExplorer Test">
