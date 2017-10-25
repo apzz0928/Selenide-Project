@@ -95,6 +95,20 @@ public class test_herowarz {
         confirm("등록이 완료되었습니다.");
         System.out.println(TestBrowser + "Community " + board +" write Pass");
   	}
+  	public void  writeImg(String board){
+  		js("$('.uid_smarteditor_area iframe').contents().find('iframe').contents().find('body').text('" + TestBrowser + " / " + nowTime + "')");
+        js("$('.uid_smarteditor_area iframe').contents().find('.se2_photo').click();");
+        windowTitle("이미지 업로드 :: SmartEditor2");
+        $("#uploadInputBox").setValue("C:\\Users\\Administrator\\Downloads\\black.jpg");
+        $("#btn_confirm").click();
+        windowTitle(" :: 액션중독! - 최강의군단");
+        $("label", 0).click();
+        $("label", 2).click();
+        $(".ua_title").setValue(nowTime);
+        $(".btn-blue").click();
+        confirm("등록이 완료되었습니다.");
+        System.out.println(TestBrowser + "Community " + board +" write Pass");
+  	}
   	public void comment(String board){
   		$(".uid_comment_content").setValue(TestBrowser);
         $(".uid_comment_writesave").click();
@@ -127,14 +141,14 @@ public class test_herowarz {
         $(".uid_login_login").waitUntil(appear, 5000);
         $(".uid_cookie_checkbox").click();
         $(".uid_test_btn_ok").click();
-        $(".uid_login_login").click();
-        dismiss("아이디를 입력해주세요");
+//        $(".uid_login_login").click();
+//        dismiss("아이디를 입력해주세요");
         $(".uid_login_id").setValue("영권1232");
-        $(".uid_login_login").click();
-        dismiss("비밀번호를 입력해주세요.");
-        $(".uid_login_password").setValue("qordlf13");
-        $(".uid_login_login").click();
-        confirm("아이디 또는 비밀번호가 일치하지 않습니다.");
+//        $(".uid_login_login").click();
+//        dismiss("비밀번호를 입력해주세요.");
+//        $(".uid_login_password").setValue("qordlf13");
+//        $(".uid_login_login").click();
+//        confirm("아이디 또는 비밀번호가 일치하지 않습니다.");
         $(".uid_login_password").setValue("qordlf12");
         $(".uid_login_login").click();
     }
@@ -218,11 +232,11 @@ public class test_herowarz {
         System.out.println(TestBrowser + "Guide chronicle Pass");
         $(By.linkText("최강의군단")).click();
 	}
-	@Test(priority = 3)
-	public void community() throws Exception{
-        $(By.linkText("커뮤니티")).hover();
+	//@Test(priority = 3)
+	public void community() {
+		$(By.linkText("커뮤니티")).hover();
         $(By.linkText("자유 게시판")).click();
-        js("window.scrollBy(0,999)");
+        js("window.scrollBy(0,999);");
         $(".btn-blue").click();
         $("#cateDepth1").selectOptionContainingText("수다");
         write("freeboard");
@@ -236,6 +250,144 @@ public class test_herowarz {
         $("#cateDepth2").selectOptionContainingText("톰");
         write("manual");
         comment("manual");
+        /*
+        $(".l-sub-boast").click();
+        js("window.scrollBy(0,1999);");
+        $(".btn-blue").click();
+		open(baseUrl + "/community/write.hero?code=GetItem");
+        writeImg("GetItem");
+        comment("GetItem");
+        $(".l-sub-collection").click();
+        js("window.scrollBy(0,1999);");
+        $(".btn-blue").click();
+        writeImg("collection");
+        comment("collection");
+        $(".l-sub-fan").click();
+        js("window.scrollBy(0,1999);");
+        $(".btn-blue").click();
+        writeImg("fan");
+        comment("fan");
+        */
+	}
+	@Test(priority = 4)
+	public void ranking() {
+		if(TestBrowser == "internetExplorer"){
+			$(By.linkText("랭킹")).hover();
+			$(By.linkText("군단 랭킹")).click();
+		} else {
+			open(baseUrl + "/ranking/corpsRanking.hero");
+		}
+		for(int i=0;i<2;++i){
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-srch").click();
+			if(i==0){
+				$(".ico-server-hyperion").click();
+			} else if (i==1){
+		        System.out.println(TestBrowser + " Ranking corps Pass");
+		        $(".l-sub-character").click();
+			}
+		}
+		for(int i=0;i<2;++i){
+			$(By.linkText("통합능력치")).click();
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-srch").click();
+			$(By.linkText("전투력")).click();
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-srch").click();
+			$(By.linkText("생존력")).click();
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-srch").click();
+			if(i==0){
+				$(".ico-server-hyperion").click();
+			} else if (i==1){
+		        System.out.println(TestBrowser + " Ranking character Pass");
+		        $(".l-sub-pvp").click();				
+			}
+		}
+        for(int i=0;i<2;++i){
+    		$(By.linkText("시즌랭킹")).click();
+            $("#keyword").setValue("영권1232화란");
+    		$(".btn-srch").click();
+    		$(By.linkText("주간랭킹")).click();
+    		$("#keyword").setValue("영권1232화란");
+    		$(".btn-srch").click();
+    		$(By.linkText("월간랭킹")).click();
+    		$("#keyword").setValue("영권1232화란");
+    		$(".btn-srch").click();
+    		if(i==0){
+    			$(".ico-server-hyperion").click();
+    		} else if (i==1){
+    	        System.out.println(TestBrowser + " Ranking mflMaster Pass");
+    	        $(".l-sub-pvp-all").click();
+    		}
+        }
+        for(int i=0;i<2;++i){
+    		$("#keyword").setValue("영권1232화란");
+    		$(".btn-srch").click();
+    		if (i==0){
+    			$(".ico-server-hyperion").click();
+    		} else if (i==1){
+    			System.out.println(TestBrowser + " Ranking mfl Pass");
+    	        $(".l-sub-liberation").click();
+    		}
+        }
+		int a = 0;
+		for(int i=1;i<5;++i){
+			$(By.linkText(i + "인")).click();
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-search").click();
+			if(i==4 && a==0){
+				$(".ico-server-hyperion").click();
+				$("#keyword").setValue("영권1232화란");
+				$(".btn-search").click();
+				i = 1;
+				a = 1;
+			} else if (i==4 && a==1) {
+				System.out.println(TestBrowser + " Ranking libaration Pass");
+			}
+		}
+		for(int i=0;i<2;++i){
+			int z = 0;
+			$(".l-sub-backdraft").click();
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-search").click();
+			if(i==0 && z==0){
+				$(".ico-server-hyperion").click();
+				z = 1;
+			} else if (i==1 && z==1) {
+				System.out.println(TestBrowser + " Ranking backdraft Pass");
+			}
+		}
+		$(".l-sub-pantheon-time").click();
+		for(int i=0;i<5;i++){
+			for(int z=1;z<5;z++){
+				$(By.linkText(z + "인")).click();
+				$("#keyword").setValue("영권1232화란");
+				$(".btn-search").click();
+			}
+			switch(i){
+				case 1: 
+					$("#uid_stage_select").selectOptionContainingText("바리데기 침실");
+					break;
+				case 2:
+					$("#uid_stage_select").selectOptionContainingText("음속의 공간");
+					break;
+				case 3:
+					$("#uid_stage_select").selectOptionContainingText("이글거리는 주차장");
+					break;
+				case 4:
+					$("#uid_stage_select").selectOptionContainingText("비트 오페라하우스");
+					break;
+			}
+			if(i == 4 && a == 1){
+				$(".ico-server-hyperion").click();
+				a = 0;
+			} else if (i == 4 && a == 0){
+				System.out.println(TestBrowser + " Ranking pantheonTime Pass");
+				$(".l-sub-raid").click();
+			}
+		}
+		
 	}
 	@AfterClass
 	public void afterTest() {

@@ -72,7 +72,7 @@ public class test_Selenide {
 			} 
 		} 
 	}
-	@Test(priority = 0)
+	//@Test(priority = 0)
 	public void alertSample() {
         open(baseUrl);
         js("");
@@ -140,6 +140,10 @@ public class test_Selenide {
         js("alert($('.ico_search_submit'));");
         Thread.sleep(10000);
     }
+	@Test(priority = 99)
+	public void Chrome() throws InterruptedException {
+        open("http://www.d.p.herowarz.com");
+	}
 	@AfterClass
 	public void afterTest() {
 		closeWebDriver();

@@ -64,9 +64,6 @@ public class gameAccountMng_Selenide {
 	private static void js(String javaScriptSource) {
 	    executeJavaScript(javaScriptSource);
 	}
-	public void sw(String name) {
-		switchTo().window(name);
-	} 
   	public static void windowTitle(String windowTitle) { 
   		WebDriverRunner.getWebDriver();
   		Set<String> windows = getWebDriver().getWindowHandles();

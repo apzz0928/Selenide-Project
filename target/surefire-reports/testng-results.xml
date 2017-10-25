@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="108349" started-at="2017-10-24T09:20:12Z" finished-at="2017-10-24T09:22:00Z">
+  <suite name="Suite" duration-ms="70369" started-at="2017-10-25T09:55:36Z" finished-at="2017-10-25T09:56:47Z">
     <groups>
     </groups>
-    <test name="internetExplorer Test" duration-ms="108349" started-at="2017-10-24T09:20:12Z" finished-at="2017-10-24T09:22:00Z">
+    <test name="firefox Test" duration-ms="70369" started-at="2017-10-25T09:55:36Z" finished-at="2017-10-25T09:56:47Z">
       <class name="test_herowarz">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_herowarz@69d9c55]" name="beforeTest" is-config="true" duration-ms="9719" started-at="2017-10-24T18:20:12Z" finished-at="2017-10-24T18:20:21Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_herowarz@69d9c55]" name="beforeTest" is-config="true" duration-ms="4950" started-at="2017-10-25T18:55:36Z" finished-at="2017-10-25T18:55:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[internetExplorer]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:test_herowarz@69d9c55]" name="login" duration-ms="16524" started-at="2017-10-24T18:20:21Z" finished-at="2017-10-24T18:20:38Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:test_herowarz@69d9c55]" name="login" duration-ms="6031" started-at="2017-10-25T18:55:41Z" finished-at="2017-10-25T18:55:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="community()[pri:3, instance:test_herowarz@69d9c55]" name="community" duration-ms="80906" started-at="2017-10-24T18:20:38Z" finished-at="2017-10-24T18:21:59Z">
+        <test-method status="PASS" signature="ranking()[pri:4, instance:test_herowarz@69d9c55]" name="ranking" duration-ms="58688" started-at="2017-10-25T18:55:47Z" finished-at="2017-10-25T18:56:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- community -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_herowarz@69d9c55]" name="afterTest" is-config="true" duration-ms="1193" started-at="2017-10-24T18:21:59Z" finished-at="2017-10-24T18:22:00Z">
+        </test-method> <!-- ranking -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_herowarz@69d9c55]" name="afterTest" is-config="true" duration-ms="692" started-at="2017-10-25T18:56:46Z" finished-at="2017-10-25T18:56:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- test_herowarz -->
-    </test> <!-- internetExplorer Test -->
+    </test> <!-- firefox Test -->
   </suite> <!-- Suite -->
 </testng-results>
