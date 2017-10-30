@@ -270,7 +270,7 @@ public class test_herowarz {
         */
 	}
 	@Test(priority = 4)
-	public void ranking() {
+	public void ranking() throws InterruptedException {
 		if(TestBrowser == "internetExplorer"){
 			$(By.linkText("랭킹")).hover();
 			$(By.linkText("군단 랭킹")).click();
@@ -344,28 +344,24 @@ public class test_herowarz {
 				a = 1;
 			} else if (i==4 && a==1) {
 				System.out.println(TestBrowser + " Ranking libaration Pass");
+				$(".l-sub-backdraft").click();
 			}
 		}
 		for(int i=0;i<2;++i){
-			int z = 0;
-			$(".l-sub-backdraft").click();
 			$("#keyword").setValue("영권1232화란");
 			$(".btn-search").click();
-			if(i==0 && z==0){
+			if(i==0){
 				$(".ico-server-hyperion").click();
-				z = 1;
-			} else if (i==1 && z==1) {
+			} else if (i==1) {
 				System.out.println(TestBrowser + " Ranking backdraft Pass");
+				$(".l-sub-pantheon-time").click();
 			}
 		}
-		$(".l-sub-pantheon-time").click();
-		for(int i=0;i<5;i++){
-			for(int z=1;z<5;z++){
-				$(By.linkText(z + "인")).click();
-				$("#keyword").setValue("영권1232화란");
-				$(".btn-search").click();
-			}
+		for(int i=0;i<6;){
 			switch(i){
+				case 0: 
+					$("#uid_stage_select").selectOptionContainingText("사마귀 부화장");
+					break;
 				case 1: 
 					$("#uid_stage_select").selectOptionContainingText("바리데기 침실");
 					break;
@@ -379,15 +375,43 @@ public class test_herowarz {
 					$("#uid_stage_select").selectOptionContainingText("비트 오페라하우스");
 					break;
 			}
-			if(i == 4 && a == 1){
+			if(i<5){
+				for(int z=1;z<5;z++){
+					$(By.linkText(z + "인")).click();
+					$("#keyword").setValue("영권1232화란");
+					$(".btn-search").click();
+				}				
+			}
+			i++;
+			if(i == 5 && a == 1){
 				$(".ico-server-hyperion").click();
-				a = 0;
-			} else if (i == 4 && a == 0){
+				$("#uid_stage_select").selectOptionContainingText("사마귀 부화장");
+				i = 0;
+				a = 2;
+			} else if (i == 5 && a == 2){
 				System.out.println(TestBrowser + " Ranking pantheonTime Pass");
 				$(".l-sub-raid").click();
 			}
 		}
-		
+		for(int i=0;i<2;++i){
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-search").click();
+			if(i==0){
+				$(".ico-server-hyperion").click();
+			} else if (i==1) {
+				System.out.println(TestBrowser + " Ranking raid Pass");
+				$(".l-sub-try-raid").click();
+			}
+		}
+		for(int i=0;i<2;++i){
+			$("#keyword").setValue("영권1232화란");
+			$(".btn-search").click();
+			if(i==0){
+				$(".ico-server-hyperion").click();
+			} else if (i==1) {
+				System.out.println(TestBrowser + " Ranking try raid Pass");
+			}
+		}
 	}
 	@AfterClass
 	public void afterTest() {
