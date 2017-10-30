@@ -417,7 +417,7 @@ public class test_herowarz {
 			}
 		}
 	}
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void download() throws Exception {
 		if(TestBrowser == "internetExplorer"){
 			$(By.linkText("자료실")).hover();
@@ -491,10 +491,90 @@ public class test_herowarz {
 		} else {
 			open(baseUrl + "/cs/home.hero");
 		}
-		$("#gsc-i-id1").setValue("asd");
-		$(".gsc-search-button-v2").click();
-		$(".gsc-results-close-btn-visible").click();
-		
+		$(".faq-tab-all").click();
+		$(".q-subject", 0).click();
+		$(".btn-white").click();
+		$(".faq-tab-install").click();
+		$(".q-subject", 0).click();
+		$(".btn-white").click();
+		$(By.linkText("게임이용")).click();
+		$(".q-subject", 0).click();
+		$(".btn-white").click();
+		$(By.linkText("운영관련")).click();
+		$(".q-subject", 0).click();
+		$(".btn-white").click();
+		$(By.linkText("계정/개인정보")).click();
+		$(".q-subject", 0).click();
+		$(".btn-white").click();
+		$(By.linkText("결제관련")).click();
+		System.out.println(TestBrowser + " cs FAQ Pass");
+		$(".l-sub-inquiry").click();
+		$(".h-cs").waitUntil(visible, 5000);
+		$(By.linkText("환불 신청 문의")).click();
+		js("window.scrollBy(0,9999);");
+		$(".btn-white").click();
+		$(".btn-blue").click();
+		$(".h-help-txt").waitUntil(visible, 5000);
+		$(".uid_refund_policy_layer_show").click();
+		$(".uid_test_btn_ok").click();
+		$(".uid_inquiry_submit").click();
+		confirm("문의 내용에 고객센터로 문의하실 환불 신청 내용을 작성해 주세요.");
+		$("#inquiryTitle").setValue(TestBrowser);
+		$("#inquiryContent").setValue(nowTime);
+		$(".uid_inquiry_submit").click();
+		confirm("문의가 등록 되었습니다.");
+		$(".h-txt-utilization").waitUntil(visible, 5000);
+		js("window.scrollBy(0,-500);");
+		js("window.scrollBy(0,-500);");
+		js("window.scrollBy(0,-500);");
+		$(".next").click();
+		$(".h-txt-utilization").waitUntil(visible, 5000);
+		$(".prev").click();
+		$(".h-txt-utilization").waitUntil(visible, 5000);
+		System.out.println(TestBrowser + " cs inquiry Pass");
+		$(".l-sub-legal").click();
+		$(".h-txt").waitUntil(visible, 5000);
+		$(By.linkText("최강의군단 운영정책")).click();
+		$(".h-txt").waitUntil(visible, 5000);
+		$(By.linkText("캐시 이용약관")).click();
+		$(".h-txt").waitUntil(visible, 5000);
+		$(By.linkText("개인정보 처리방침")).click();
+		$(".h-txt").waitUntil(visible, 5000);
+		$(By.linkText("청소년 보호정책")).click();
+		$(".h-txt").waitUntil(visible, 5000);
+		System.out.println(TestBrowser + " cs policy Pass");
+		open(baseUrl);
+	}
+	@Test(priority = 7)
+	public void myPage() {
+		$(".btn-mypage").waitUntil(visible, 5000).click();
+		$(".h-txt-myinfo").waitUntil(visible, 5000);
+		if(TestBrowser == "internetExplorer"){
+			$(By.linkText("변경")).click();			
+		} else {
+			$(".btn", 2).click();			
+		}
+		$(".uid_main_serversetting_select").click();
+		System.out.println(TestBrowser + " myPage serverChange Pass");	
+		if(TestBrowser == "internetExplorer"){
+			$(By.linkText("대표캐릭터 선택하기")).click();
+		} else {
+			$(".btn", 3).click();
+		}
+		windowTitle("액션중독! - 최강의 군단");
+		$(By.linkText("화란")).click();
+		$(".uid_character_select").click();
+		windowTitle(" :: 액션중독! - 최강의군단");
+		if(TestBrowser == "internetExplorer"){
+			$(By.linkText("대표캐릭터 선택하기")).click();
+		} else {
+			$(".btn", 3).click();
+		}
+		windowTitle("액션중독! - 최강의 군단");
+		$(By.linkText("나그네")).click();
+		$(".uid_character_select").click();
+		windowTitle(" :: 액션중독! - 최강의군단");
+		System.out.println(TestBrowser + " myPage characterChange Pass");
 	}
 	@AfterClass
 	public void afterTest() {

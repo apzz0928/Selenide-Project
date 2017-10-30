@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="66954" started-at="2017-10-30T07:52:54Z" finished-at="2017-10-30T07:54:01Z">
+  <suite name="Suite" duration-ms="17415" started-at="2017-10-30T09:54:32Z" finished-at="2017-10-30T09:54:50Z">
     <groups>
     </groups>
-    <test name="internetExplorer Test" duration-ms="66954" started-at="2017-10-30T07:52:54Z" finished-at="2017-10-30T07:54:01Z">
+    <test name="firefox Test" duration-ms="17415" started-at="2017-10-30T09:54:32Z" finished-at="2017-10-30T09:54:50Z">
       <class name="test_herowarz">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_herowarz@69d9c55]" name="beforeTest" is-config="true" duration-ms="9208" started-at="2017-10-30T16:52:54Z" finished-at="2017-10-30T16:53:03Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test_herowarz@6276ae34]" name="beforeTest" is-config="true" duration-ms="5226" started-at="2017-10-30T18:54:32Z" finished-at="2017-10-30T18:54:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[internetExplorer]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:test_herowarz@69d9c55]" name="login" duration-ms="9975" started-at="2017-10-30T16:53:03Z" finished-at="2017-10-30T16:53:13Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:test_herowarz@6276ae34]" name="login" duration-ms="5859" started-at="2017-10-30T18:54:37Z" finished-at="2017-10-30T18:54:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="download()[pri:5, instance:test_herowarz@69d9c55]" name="download" duration-ms="46870" started-at="2017-10-30T16:53:13Z" finished-at="2017-10-30T16:54:00Z">
+        <test-method status="PASS" signature="myPage()[pri:7, instance:test_herowarz@6276ae34]" name="myPage" duration-ms="5598" started-at="2017-10-30T18:54:43Z" finished-at="2017-10-30T18:54:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- download -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_herowarz@69d9c55]" name="afterTest" is-config="true" duration-ms="892" started-at="2017-10-30T16:54:00Z" finished-at="2017-10-30T16:54:01Z">
+        </test-method> <!-- myPage -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test_herowarz@6276ae34]" name="afterTest" is-config="true" duration-ms="722" started-at="2017-10-30T18:54:49Z" finished-at="2017-10-30T18:54:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- test_herowarz -->
-    </test> <!-- internetExplorer Test -->
+    </test> <!-- firefox Test -->
   </suite> <!-- Suite -->
 </testng-results>
