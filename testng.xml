@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite"> <!-- parallel="tests" = 병렬테스트 -->
-  <test name="firefox Test">
-  	<parameter name="browser" value="firefox" />
-    <classes>
+<!--   <test name="firefox Test"> -->
+<!--   	<parameter name="browser" value="firefox" /> -->
+<!--     <classes> -->
 <!--       <class name="authMng_Selenide"/> -->
 <!--       <class name="gameAccountMng_Selenide"/> -->
 <!--       <class name="gameMng_Selenide"/> -->
 <!--       <class name="test_Selenide"/> -->
-		<class name="test_herowarz"/>
-    </classes>
-  </test>
+<!-- 		<class name="test_herowarz"/> -->
+<!--     </classes> -->
+<!--   </test> -->
 <!--   <test name="chrome Test"> -->
 <!--   	<parameter name="browser" value="chrome" /> -->
 <!--     <classes> -->
@@ -21,14 +21,14 @@
 <!--       <class name="test_herowarz"/> -->
 <!--     </classes> -->
 <!--   </test> -->
-<!--   <test name="internetExplorer Test"> -->
-<!--   	<parameter name="browser" value="internetExplorer" /> -->
-<!--     <classes> -->
+  <test name="internetExplorer Test">
+  	<parameter name="browser" value="internetExplorer" />
+    <classes>
 <!--       <class name="authMng_Selenide"/> -->
 <!--       <class name="gameAccountMng_Selenide"/> -->
 <!--       <class name="gameMng_Selenide"/> -->
 <!--       <class name="test_Selenide"/> -->
-<!--       <class name="test_herowarz"/> -->
-<!--     </classes> -->
-<!--   </test> -->
+      <class name="test_herowarz"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->

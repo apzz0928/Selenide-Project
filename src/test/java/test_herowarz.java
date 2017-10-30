@@ -39,7 +39,7 @@ public class test_herowarz {
 		String urlToRemoteWD = nodeUrl;
   		DesiredCapabilities cap;
   		ScreenShooter.captureSuccessfulTests = false;
-  		if(browser.equalsIgnoreCase("chrome")){
+  		if(browser.equals("chrome")){
   			TestBrowser = "chrome";
   			cap = DesiredCapabilities.chrome();
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
@@ -130,7 +130,6 @@ public class test_herowarz {
         $(".uid_comment_delete").click();
         confirm("댓글을 삭제 하시겠습니까?");
         System.out.println(TestBrowser + "Community " + board +" comment Pass");
-        $(".btn-white").click();
   	}
 
 	@Test(priority = 0)
@@ -243,6 +242,7 @@ public class test_herowarz {
         $(".btn-white").click();
         $(".comment-num", 3).click();
         comment("board");
+        $(".btn-white").click();
         $(".l-sub-manual ").click();
         js("window.scrollBy(0,999)");
         $(".btn-blue").click();
@@ -250,6 +250,7 @@ public class test_herowarz {
         $("#cateDepth2").selectOptionContainingText("톰");
         write("manual");
         comment("manual");
+        $(".btn-white").click();
         /*
         $(".l-sub-boast").click();
         js("window.scrollBy(0,1999);");
@@ -257,20 +258,23 @@ public class test_herowarz {
 		open(baseUrl + "/community/write.hero?code=GetItem");
         writeImg("GetItem");
         comment("GetItem");
+        $(".btn-white").click();
         $(".l-sub-collection").click();
         js("window.scrollBy(0,1999);");
         $(".btn-blue").click();
         writeImg("collection");
         comment("collection");
+        $(".btn-white").click();
         $(".l-sub-fan").click();
         js("window.scrollBy(0,1999);");
         $(".btn-blue").click();
         writeImg("fan");
         comment("fan");
+        $(".btn-white").click();
         */
 	}
-	@Test(priority = 4)
-	public void ranking() throws InterruptedException {
+	//@Test(priority = 4)
+	public void ranking() {
 		if(TestBrowser == "internetExplorer"){
 			$(By.linkText("랭킹")).hover();
 			$(By.linkText("군단 랭킹")).click();
@@ -412,6 +416,85 @@ public class test_herowarz {
 				System.out.println(TestBrowser + " Ranking try raid Pass");
 			}
 		}
+	}
+	@Test(priority = 5)
+	public void download() throws Exception {
+		if(TestBrowser == "internetExplorer"){
+			$(By.linkText("자료실")).hover();
+			$(By.linkText("게임다운로드")).click();
+		} else {
+			open(baseUrl + "/download/game.hero");
+		}
+		url("http://download.herowarz.com/live/MCSetup.exe");
+		System.out.println(TestBrowser + " download client Pass");
+		$(".btn-download-game-pc").click();
+		confirm("PC방에서만 다운로드가 가능합니다.");
+		System.out.println(TestBrowser + " download pcroom client Pass");		
+		url("http://download.herowarz.com/live/MCSetup_Chrome.exe");
+		System.out.println(TestBrowser + " download chrome install Pass");
+		url("http://static.herowarz.com/common/images/download/driver_nvidia.png");
+		url("http://www.nvidia.co.kr/Download/index.aspx?lang=kr");
+		System.out.println(TestBrowser + " download nvidia Pass");
+		url("http://static.herowarz.com/common/images/download/driver_ati.png");
+		url("http://support.amd.com/ko-kr/download");
+		System.out.println(TestBrowser + " download radeon Pass");
+		url("http://static.herowarz.com/common/images/download/driver_intel.png");
+		url("https://downloadcenter.intel.com/ko/");
+		System.out.println(TestBrowser + " download intel Pass");
+		url("http://static.herowarz.com/common/images/download/driver_directx.png");
+		url("http://www.microsoft.com/ko-kr/download/details.aspx?id=35");
+		System.out.println(TestBrowser + " download directX Pass");
+		$(".l-sub-movie").click();
+		url("http://static.herowarz.com/editor/upload/2015/39/201509220807372_1st%20anniversary%20thanks.zip");
+		comment("movie");
+		js("window.scrollBy(0,-500);");
+		js("window.scrollBy(0,-500);");
+		js("window.scrollBy(0,-500);");
+		$(".l-sub-gallery").click();
+		$(".gallery-h").waitUntil(visible, 5000);
+		$(".gallery-item", 0).click();
+		url("http://static.d.p.herowarz.com/editor/upload/2016/40/B-d72478b7d0444cbdb1a973ac4062b884.png");
+		$(".ico-rolling-rig").click();
+		$(".ico-rolling-left").click();
+		$(".btn-white").click();
+		$(".gallery-h").waitUntil(visible, 5000);
+		System.out.println(TestBrowser + " download gallery Pass");
+		$(".l-sub-wallpaper").click();
+		$(".gallery-h").waitUntil(visible, 5000);
+		$(".gallery-item", 0).click();
+		url("http://static.d.p.herowarz.com/editor/upload/2017/25/B-04fb00cf344d4cca972dafcd4871e4d1.jpg");
+		url("http://static.d.p.herowarz.com/editor/upload/2017/25/B-dafd6c04e9694277b8f0dcae0e5e4d3c.jpg");
+		$(".ico-rolling-rig").click();
+		$(".ico-rolling-left").click();
+		$(".btn-white").click();
+		System.out.println(TestBrowser + " download wallpaper Pass");
+		$(".l-sub-kit").click();
+		$(".ir-txt-download").waitUntil(visible, 5000);
+		url("http://static.d.p.herowarz.com/common/images/download/fankit_banner_20161221.jpg");
+		url("http://static.d.p.herowarz.com/common/file/download/fankit/Herowarz_MFL_SignalMusic_2016.12.21.zip");
+		System.out.println(TestBrowser + " download kit MFL BGM Pass");
+		url("http://static.d.p.herowarz.com/common/images/download/fankit_banner_20141029.jpg");
+		url("http://static.d.p.herowarz.com/filebox/herowarz_honeybook_v.1.1.zip");
+		System.out.println(TestBrowser + " download kit honeyBook Pass");
+		url("http://static.d.p.herowarz.com/common/images/download/fankit_banner_20141119.jpg");
+		url("http://static.d.p.herowarz.com/files/fankit/Kit_201411.zip");
+		System.out.println(TestBrowser + " download fan kit honeyBook Pass");
+		url("http://static.d.p.herowarz.com/common/images/download/fankit_banner_2013.11.22.01.jpg");
+		url("http://static.d.p.herowarz.com/files/fankit/Herowarz_fankit_2013.11.22_LBT.zip");
+		System.out.println(TestBrowser + " download kit honeyBook Pass");
+	}
+	//@Test(priority = 6)
+	public void cs() {
+		if(TestBrowser == "internetExplorer"){
+			$(By.linkText("고객센터")).hover();
+			$(By.linkText("FAQ")).click();	
+		} else {
+			open(baseUrl + "/cs/home.hero");
+		}
+		$("#gsc-i-id1").setValue("asd");
+		$(".gsc-search-button-v2").click();
+		$(".gsc-results-close-btn-visible").click();
+		
 	}
 	@AfterClass
 	public void afterTest() {

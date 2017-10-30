@@ -35,7 +35,7 @@ public class test_Selenide {
   		String urlToRemoteWD = nodeUrl;
   		DesiredCapabilities cap;
   		ScreenShooter.captureSuccessfulTests = false;
-  		if(browser.equalsIgnoreCase("chrome")){
+  		if(browser.equals("chrome")){
   			TestBrowser = "chrome";
   			cap = DesiredCapabilities.chrome();
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
