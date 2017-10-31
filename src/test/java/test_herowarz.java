@@ -24,7 +24,7 @@ import com.codeborne.selenide.testng.ScreenShooter;
 
 
 public class test_herowarz {
-	private static String baseUrl, nodeUrl;
+	private static String baseUrl, hubUrl;
 	private static String TestBrowser;
 	
 	Date now = new Date();
@@ -34,9 +34,9 @@ public class test_herowarz {
 	@BeforeClass
 	public void beforeTest(String browser) throws MalformedURLException {
 		baseUrl = "http://www.d.p.herowarz.com";
-		nodeUrl = "http://10.10.105.228:4444/wd/hub";
+		hubUrl = "http://10.10.105.228:4444/wd/hub";
 		
-		String urlToRemoteWD = nodeUrl;
+		String urlToRemoteWD = hubUrl;
   		DesiredCapabilities cap;
   		ScreenShooter.captureSuccessfulTests = false;
   		if(browser.equals("chrome")){

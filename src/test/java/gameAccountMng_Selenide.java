@@ -22,7 +22,7 @@ import com.codeborne.selenide.testng.ScreenShooter;
 
 
 public class gameAccountMng_Selenide {
-	private static String baseUrl, nodeUrl;
+	private static String baseUrl, hubUrl;
 	private static String TestBrowser;
 	private static String accountKey;
 	
@@ -30,9 +30,9 @@ public class gameAccountMng_Selenide {
 	@BeforeClass
 	public void beforeTest(String browser) throws MalformedURLException {
 		baseUrl = "https://rct-d-p.astorm.com";
-		nodeUrl = "http://10.10.105.228:4444/wd/hub";
+		hubUrl = "http://10.10.105.228:4444/wd/hub";
   		
-  		String urlToRemoteWD = nodeUrl;
+  		String urlToRemoteWD = hubUrl;
   		DesiredCapabilities cap;
   		ScreenShooter.captureSuccessfulTests = false;
   		if(browser.equals("chrome")){
