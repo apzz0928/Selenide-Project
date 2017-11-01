@@ -61,7 +61,13 @@ public class test_herowarz {
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
 	        WebDriverRunner.setWebDriver(driver);
 	  		driver.manage().window().setSize(new Dimension(1600, 1400));
-  		}
+  		} /*else if(browser.equals("edge")) {
+  			TestBrowser = "edge";
+  			cap = DesiredCapabilities.edge();
+	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
+	        WebDriverRunner.setWebDriver(driver);
+	  		driver.manage().window().setSize(new Dimension(1600, 1400));
+  		}*/
     }
 	public static void js(String javaScriptSource) {
 	    executeJavaScript(javaScriptSource);
@@ -76,6 +82,17 @@ public class test_herowarz {
 			} 
 		} 
 	}
+  	public static void a123(){
+  		String parentwindow = getWebDriver().getWindowHandle();
+  		Set<String> handles = getWebDriver().getWindowHandles();
+  		for(String childwindow : handles ){
+  			if(!childwindow.equals(parentwindow)){
+  				switchTo().window(childwindow);
+  				close();
+  				switchTo().window(parentwindow);
+  			}
+  		}
+  	}
   	public static void url(String URL) throws Exception {
   		HttpURLConnection huc = null;
   		huc = (HttpURLConnection)(new URL(URL).openConnection());
@@ -233,8 +250,14 @@ public class test_herowarz {
 	}
 	//@Test(priority = 3)
 	public void community() {
-		$(By.linkText("커뮤니티")).hover();
-        $(By.linkText("자유 게시판")).click();
+		if(TestBrowser == "internetExplorer"){
+			$(By.linkText("커뮤니티")).hover();
+	        $(By.linkText("자유 게시판")).click();
+	        $(".community > a", 0).click();
+		} else {
+			open(baseUrl + "/community/FreeBoard/list.hero");
+		}
+
         js("window.scrollBy(0,999);");
         $(".btn-blue").click();
         $("#cateDepth1").selectOptionContainingText("수다");
@@ -549,32 +572,119 @@ public class test_herowarz {
 	public void myPage() {
 		$(".btn-mypage").waitUntil(visible, 5000).click();
 		$(".h-txt-myinfo").waitUntil(visible, 5000);
-		if(TestBrowser == "internetExplorer"){
-			$(By.linkText("변경")).click();			
-		} else {
-			$(".btn", 2).click();			
-		}
+		$(".btn", 2).click();
 		$(".uid_main_serversetting_select").click();
-		System.out.println(TestBrowser + " myPage serverChange Pass");	
+		System.out.println(TestBrowser + " myPage serverChange Pass");
 		if(TestBrowser == "internetExplorer"){
-			$(By.linkText("대표캐릭터 선택하기")).click();
+			
 		} else {
 			$(".btn", 3).click();
+			windowTitle("액션중독! - 최강의 군단");
+			int charValue = (int) (Math.random() * 5 + 1);
+			if (charValue == 1){
+				$(By.linkText("화란")).click();				
+			} else if (charValue == 2){
+				$(By.linkText("나그네")).click();
+			} else if (charValue == 3){
+				$(By.linkText("톰")).click();
+			} else if (charValue == 4){
+				$(By.linkText("오드리")).click();
+			} else if (charValue == 5){
+				$(By.linkText("로테")).click();
+			}
+			$(".uid_character_select").click();
+			windowTitle(" :: 액션중독! - 최강의군단");
+			getWebDriver().switchTo().defaultContent();
+//			$(".btn", 3).click();
+//			windowTitle("액션중독! - 최강의 군단");
+//			$(By.linkText("나그네")).click();
+//			$(".uid_character_select").click();
+//			windowTitle(" :: 액션중독! - 최강의군단");
+//			getWebDriver().switchTo().defaultContent();
+			System.out.println(TestBrowser + " myPage characterChange Pass");
 		}
-		windowTitle("액션중독! - 최강의 군단");
-		$(By.linkText("화란")).click();
-		$(".uid_character_select").click();
-		windowTitle(" :: 액션중독! - 최강의군단");
-		if(TestBrowser == "internetExplorer"){
-			$(By.linkText("대표캐릭터 선택하기")).click();
+//		$(".l-sub-jam").click();
+//		$(".txt-has-jam").waitUntil(visible, 5000);
+//		$("#fromDate").click();
+//		$(".dp_caption").click();
+//		$(".dp_previous").click();
+//		$(".dp_previous").click();
+//		$(".dp_month_0").click();
+//		$("td", 5).click();
+//		$("#toDate").click();
+//		$(".dp_today", 1).click();
+//		$(".btn-small").click();
+//		$(".txt-has-jam").waitUntil(visible, 5000);
+//		$(".tab-date", 0).click();
+//		js("window.scrollBy(0,999);");
+//		$(".next").click();
+//		js("window.scrollBy(0,999);");
+//		$(".prev").click();
+//		$(".tab-date", 1).click();
+//		js("window.scrollBy(0,999);");
+//		$(".next").click();
+//		js("window.scrollBy(0,999);");
+//		$(".prev").click();
+//		$(".tab-date", 2).click();
+//		js("window.scrollBy(0,999);");
+//		$(".next").click();
+//		js("window.scrollBy(0,999);");
+//		$(".prev").click();
+//		System.out.println(TestBrowser + " myPage jam Pass");
+//		$(".l-sub-coupon").click();
+//		$("#btnRegCoupon").click();
+//		confirm("쿠폰 번호를 정확하게 입력해주세요.");
+//		$(".coupon-name").click();
+//		$(".cancel-btn").click();
+//		$(".live-coupon-btn").click();
+//		$(".cancel-btn").click();
+//		$(".tab", 1).click();
+//		$(".h-help-txt").waitUntil(visible, 5000);
+//		$(".tab", 0).click();
+//		$(".h-help-txt").waitUntil(visible, 5000);
+//		System.out.println(TestBrowser + " myPage coupon Pass");
+		$(".l-sub-info").click();
+		$(".h-txt-confirm-password").waitUntil(visible, 5000);
+		$(".uid_submit_next_page").click();
+		confirm("비밀번호을 입력해 주세요.");
+		$("#label-pw").setValue("qordlf12");
+		$(".uid_submit_next_page").click();
+		$(".chk-input").click();
+		if (TestBrowser == "internetExplorer"){
+			
 		} else {
-			$(".btn", 3).click();
+			$(".uid_find_zipcode").click();
+			windowTitle("액션중독! - 최강의 군단");
+			$("#label-zip").setValue("천호동");
+			$(".uid_zipcode_search").click();
+			$("a", 2).click();
+			windowTitle(" :: 액션중독! - 최강의군단");
+			getWebDriver().switchTo().defaultContent();
 		}
+		$(".uid_find_zipcode").click();
 		windowTitle("액션중독! - 최강의 군단");
-		$(By.linkText("나그네")).click();
-		$(".uid_character_select").click();
+		$("#label-zip").setValue("천호동");
+		$(".uid_zipcode_search").click();
+		$("a", 2).click();
 		windowTitle(" :: 액션중독! - 최강의군단");
-		System.out.println(TestBrowser + " myPage characterChange Pass");
+		getWebDriver().switchTo().defaultContent();
+		$("#label-address2").setValue("123456");
+		$(".uid_account_edit_submit").click();
+		confirm("개인정보 수정이 완료되었습니다.");
+		$(".l-sub-info").click();
+		$("#label-pw").setValue("qordlf12");
+		$(".uid_submit_next_page").click();
+		$(".tab", 1).click();
+		$("#label-cpw").setValue("qordlf12");
+		$("#label-pw1").setValue("qordlf12");
+		$("#label-pw2").setValue("qordlf12");
+		$(".uid_change_password_submit").click();
+		confirm("비밀번호 변경이 완료되었습니다. 이전 페이지로 이동합니다.");
+		$(".l-sub-info").click();
+		$("#label-pw").setValue("qordlf12");
+		$(".uid_submit_next_page").click();
+		$(".tab", 3).click();
+		$(".h-txt-refer-myinfo").waitUntil(visible, 5000);
 	}
 	@AfterClass
 	public void afterTest() {

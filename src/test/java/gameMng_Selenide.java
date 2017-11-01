@@ -80,6 +80,35 @@ public class gameMng_Selenide {
 			} 
 		} 
 	}
+  	public static void slang(String slang){
+		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
+		$(".ac_input", 0).setValue(TestBrowser + " Selenide 테스트 " + slang + " 정규표현식.");
+		$(".ac_input", 2).setValue(TestBrowser + " Selenide 테스트 " + slang + " 코멘트.");
+		$(".ac_input", 3).setValue(TestBrowser + " Selenide 테스트 " + slang + " 메세지");
+		$(".uid_slang_word_add_test_btn").click();
+		$(".ac_container_paragraph").waitUntil(text("일치하는 패턴이 존재하지 않습니다."), 1000);
+		$(".uid_slang_word_add_btn").click();
+		$(".uid_ok_btn").waitUntil(visible, 3000);
+		$(".uid_ok_btn").click();
+		$(".uid_ok_btn").waitUntil(visible, 3000);
+		$(".uid_ok_btn").click();
+		$$(".uid_slang_word_list_modify_btn").last().click();
+		$(".ac_input", 6).setValue(TestBrowser + " ☆★☆★Selenide " + slang + " 테스트 정규표현식☆★☆★");
+		$(".ac_input", 7).setValue(TestBrowser + " ☆★☆★Selenide " + slang + " 테스트 코멘트☆★☆★");
+		$(".ac_input", 8).setValue(TestBrowser + " ☆★☆★Selenide " + slang + " 테스트 메세지☆★☆★");
+		$(".uid_slang_word_modify_test_btn").click();
+		$(".ac_container_paragraph").waitUntil(text("일치하는 패턴이 존재하지 않습니다."), 1000);
+		$(".uid_slang_word_modify_btn").click();
+		$(".uid_ok_btn").waitUntil(visible, 3000);
+		$(".uid_ok_btn").click();
+		$(".uid_ok_btn").waitUntil(visible, 3000);
+		$(".uid_ok_btn").click();
+		$$(".uid_slang_word_list_remove_btn").last().click();
+		$(".uid_ok_btn").waitUntil(visible, 3000);
+		$(".uid_ok_btn").click();
+		$(".uid_ok_btn").waitUntil(visible, 3000);
+		$(".uid_ok_btn").click();
+  	}
 	@Test(priority = 0)
 	public void Login() {
         open(baseUrl + "/login/form.ct");
@@ -89,7 +118,7 @@ public class gameMng_Selenide {
         open(baseUrl + "/common/locale/ko");
         System.out.println(TestBrowser + " Login : Pass");
     }
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void systemMessage() {
         open(baseUrl + "/gmcmd/systemMessageForm.ct");
         for(int i=0;i<4;){
@@ -111,7 +140,7 @@ public class gameMng_Selenide {
         $(".menu-title").waitUntil(text("전체 메뉴"), 3000);
         System.out.println(TestBrowser + " systemMessage : Pass");
     }
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void ingameNotice_add() {
 		open(baseUrl + "/gmcmd/ingameNotice.ct");
 		js("$('input[name=startAt]').val('" + startAt + "');");
@@ -130,7 +159,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " ingameNotice_add : Pass");
     }
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void ingameNotice_statusChange() {
 		$(".uid_notice_start_btn").click();
 		$(".uid_ok_btn").click();
@@ -149,7 +178,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " ingameNotice : Pass");
     }
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void semdMail() {
 		open(baseUrl + "/gmcmd/sendMailForm.ct");
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
@@ -178,7 +207,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " semdMail : Pass");
     }
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void kickUser() {
 		open(baseUrl + "/gmcmd/kickUserForm.ct");
 		$("input[name=accountKey]").setValue("9000115");
@@ -189,7 +218,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " kickUser : Pass");
     }
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void mailout() {
 		open(baseUrl + "/gmcmd/mailoutform.ct");
 		$(By.name("filedata")).sendKeys("C:\\Users\\Administrator\\Downloads\\템골드전부미첨부.xlsx");
@@ -201,7 +230,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " mailout : Pass");
     }
-	@Test(priority = 7)
+	//@Test(priority = 7)
 	public void burningEvent() {
 		open(baseUrl + "/event/burning/list.ct");
 		$(By.linkText("추가")).click();
@@ -229,7 +258,7 @@ public class gameMng_Selenide {
 		$(".uid_ok_btn").click();
 		System.out.println(TestBrowser + " burningEvent : Pass");
     }
-	@Test(priority = 8)
+	//@Test(priority = 8)
 	public void serverStatus() {
 		open(baseUrl + "/cache/getServerStatus.ct");
 		$(".ac_input", 1).setValue("50");
@@ -256,7 +285,7 @@ public class gameMng_Selenide {
 		$(".uid_log_search_btn").click();
 		System.out.println(TestBrowser + " serverStatus : Pass");
     }
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	public void limitDrop() {
 		open(baseUrl + "/event/limitdrop/confUploadForm.ct");
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
@@ -279,7 +308,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " limitDrop : Pass");
     }
-	@Test(priority = 10)
+	//@Test(priority = 10)
 	public void ingameGuide() {
 		open(baseUrl + "/gmcmd/ingameGuide/list.ct");
 		$(".uid_ingame_guide_add_btn").click();
@@ -304,7 +333,7 @@ public class gameMng_Selenide {
 		$(".uid_ok_btn").click();
 		System.out.println(TestBrowser + " ingameGuide : Pass");
     }
-	@Test(priority = 11)
+	//@Test(priority = 11)
 	public void onlineUser() {
 		open(baseUrl + "/gmcmd/onlineUserCountInfo.ct");
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
@@ -313,51 +342,19 @@ public class gameMng_Selenide {
 	@Test(priority = 12)
 	public void slangWord() {
 		open(baseUrl + "/gmcmd/slangForm.ct");
-		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
-		$(".ac_input", 0).setValue(TestBrowser + " Selenide 테스트 금칙어 정규표현식.");
-		$(".ac_input", 2).setValue(TestBrowser + " Selenide 테스트 금칙어 코멘트.");
-		$(".ac_input", 3).setValue(TestBrowser + " Selenide 테스트 금칙어 메세지");
-		$(".uid_slang_word_add_test_btn").click();
-		$(".ac_container_paragraph").waitUntil(text("일치하는 패턴이 존재하지 않습니다."), 1000);
-		$(".uid_slang_word_add_btn").click();
-		$(".uid_ok_btn").click();
-		$(".uid_ok_btn").click();
-		$$(".uid_slang_word_list_modify_btn").last().click();
-		$(".ac_input", 6).setValue(TestBrowser + " ☆★☆★Selenide 금칙어 테스트 정규표현식☆★☆★");
-		$(".ac_input", 7).setValue(TestBrowser + " ☆★☆★Selenide 금칙어 테스트 코멘트☆★☆★");
-		$(".ac_input", 8).setValue(TestBrowser + " ☆★☆★Selenide 금칙어 테스트 메세지☆★☆★");
-		$(".uid_slang_word_modify_test_btn").click();
-		$(".ac_container_paragraph").waitUntil(text("일치하는 패턴이 존재하지 않습니다."), 1000);
-		$(".uid_slang_word_modify_btn").click();
-		$(".uid_ok_btn").click();
-		$(".uid_ok_btn").click();
-		$$(".uid_slang_word_list_remove_btn").last().click();
-		$(".uid_ok_btn").click();
-		$(".uid_ok_btn").click();
-		$(By.linkText("금지어")).click();
-		$(".ac_input", 0).setValue(TestBrowser + " Selenide 테스트 금지어 정규표현식.");
-		$(".ac_input", 2).setValue(TestBrowser + " Selenide 테스트 금지어 코멘트.");
-		$(".ac_input", 3).setValue(TestBrowser + " Selenide 테스트 금지어 메세지");
-		$(".uid_slang_word_add_test_btn").click();
-		$(".ac_container_paragraph").waitUntil(text("일치하는 패턴이 존재하지 않습니다."), 1000);
-		$(".uid_slang_word_add_btn").click();
-		$(".uid_ok_btn").click();
-		$(".uid_ok_btn").click();
-		$$(".uid_slang_word_list_modify_btn").last().click();
-		$(".ac_input", 6).setValue(TestBrowser + " ☆★☆★Selenide 테스트 금지어 정규표현식☆★☆★");
-		$(".ac_input", 7).setValue(TestBrowser + " ☆★☆★Selenide 테스트 금지어 코멘트☆★☆★");
-		$(".ac_input", 8).setValue(TestBrowser + " ☆★☆★Selenide 테스트 금지어 메세지☆★☆★");
-		$(".uid_slang_word_modify_test_btn").click();
-		$(".ac_container_paragraph").waitUntil(text("일치하는 패턴이 존재하지 않습니다."), 1000);
-		$(".uid_slang_word_modify_btn").click();
-		$(".uid_ok_btn").click();
-		$(".uid_ok_btn").click();
-		$$(".uid_slang_word_list_remove_btn").last().click();
-		$(".uid_ok_btn").click();
-		$(".uid_ok_btn").click();
-		System.out.println(TestBrowser + " slangWord : Pass");
+		slang("명명 금칙어");
+		System.out.println(TestBrowser + " slang type N : Pass");
+		$(By.linkText("금칙어")).click();
+		slang("금칙어");
+		System.out.println(TestBrowser + " slang type B : Pass");
+		$(By.linkText("대체어")).click();
+		slang("대체어");
+		System.out.println(TestBrowser + " slang type F : Pass");
+		$(By.linkText("차단어")).click();
+		slang("차단어");
+		System.out.println(TestBrowser + " slang type I : Pass");
     }
-	@Test(priority = 13)
+	//@Test(priority = 13)
 	public void pvpSchedule() throws InterruptedException {
 		open(baseUrl + "/event/pvpSchedule/settingList.ct");
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
