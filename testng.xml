@@ -24,14 +24,14 @@
   <test name="internetExplorer Test">
 <!--   	<parameter name="browser" value="internetExplorer" /> -->
 <!--   	<parameter name="browser" value="firefox" /> -->
-  	<parameter name="browser" value="chrome" />
-<!--   	<parameter name="browser" value="edge" /> -->
+<!--   	<parameter name="browser" value="chrome" /> -->
+  	<parameter name="browser" value="edge" />
     <classes>
 <!--       <class name="authMng_Selenide"/> -->
 <!--       <class name="gameAccountMng_Selenide"/> -->
-<!--       <class name="gameMng_Selenide"/> -->
+      <class name="gameMng_Selenide"/>
 <!--       <class name="test_Selenide"/> -->
-      <class name="test_herowarz"/>
+<!--       <class name="test_herowarz"/> -->
     </classes>
   </test>
 </suite> <!-- Suite -->

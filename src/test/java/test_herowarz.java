@@ -61,13 +61,13 @@ public class test_herowarz {
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
 	        WebDriverRunner.setWebDriver(driver);
 	  		driver.manage().window().setSize(new Dimension(1600, 1400));
-  		} /*else if(browser.equals("edge")) {
+  		} else if(browser.equals("edge")) {
   			TestBrowser = "edge";
   			cap = DesiredCapabilities.edge();
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
 	        WebDriverRunner.setWebDriver(driver);
 	  		driver.manage().window().setSize(new Dimension(1600, 1400));
-  		}*/
+  		}
     }
 	public static void js(String javaScriptSource) {
 	    executeJavaScript(javaScriptSource);
@@ -155,8 +155,6 @@ public class test_herowarz {
         js("");
         $(By.linkText("액션중독! - 최강의 군단")).click();
         $(".uid_login_login").waitUntil(appear, 5000);
-        $(".uid_cookie_checkbox").click();
-        $(".uid_test_btn_ok").click();
 //        $(".uid_login_login").click();
 //        dismiss("아이디를 입력해주세요");
         $(".uid_login_id").setValue("영권1232");
