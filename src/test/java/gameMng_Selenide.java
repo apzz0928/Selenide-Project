@@ -118,6 +118,7 @@ public class gameMng_Selenide {
 	@Test(priority = 0)
 	public void Login() {
         open(baseUrl + "/login/form.ct");
+        $(By.linkText("LDAP")).click();
         $(By.name("j_username")).setValue("apzz0928");
         $(By.name("j_password")).setValue("qordlf!@34");
         $(".uid_ldap_login_submit_btn").click();
