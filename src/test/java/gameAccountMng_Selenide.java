@@ -77,13 +77,14 @@ public class gameAccountMng_Selenide {
 	@Test(priority = 0)
 	public void Login() {
         open(baseUrl + "/login/form.ct");
+        $(By.linkText("LDAP")).click();
         $(By.name("j_username")).setValue("apzz0928");
         $(By.name("j_password")).setValue("qordlf!@34");
         $(".uid_ldap_login_submit_btn").click();
         open(baseUrl + "/common/locale/ko");
         System.out.println(TestBrowser + " Login : Pass");
     }
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void accountSearch() {
         open(baseUrl + "/account/gamedata/searchform.ct");
         $(".menu-title").waitUntil(text("전체 메뉴"), 3000);
@@ -109,7 +110,7 @@ public class gameAccountMng_Selenide {
         $(".menu-title").waitUntil(text("전체 메뉴"), 3000);
         System.out.println(TestBrowser + " accountSearch : Pass");
     }
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void accountBlock() {
 		open(baseUrl + "/account/gameBlock.ct");
         $(".menu-title").waitUntil(text("전체 메뉴"), 3000);
@@ -428,6 +429,23 @@ public class gameAccountMng_Selenide {
         $(".uid_ok_btn").click();
         $(".uid_ok_btn").click();
         $(".menu-title").waitUntil(text("전체 메뉴"), 3000);
+    }
+	@Test(priority = 4)
+	public void promptTest() throws InterruptedException {
+        open("https://rct-d-p.astorm.com/account/gamedata/gameAccountInfo.ct?sk=1&accountKey=56");
+        $(".uid_inven_equip_link", 0).click();
+        $(".ac_container_tab").waitUntil(visible, 5000);
+        $(".link-inven-equip").click();
+        $(".uid_iteminfo_link").waitUntil(visible, 5000);
+        $(".uncommon").click();
+        $(".ac_container_layer_header").waitUntil(visible, 5000);
+        $(".au_text_center", 16).click();
+        //$(By.linkText("삭제")).click();
+        Thread.sleep(5000);
+        prompt("삭제 사유를 입력하세요.", "prompt 테스트");
+        Thread.sleep(5000);
+        $(".uid_ok_btn").click();
+        Thread.sleep(5000);
     }
 	@AfterClass
 	public void afterTest() {

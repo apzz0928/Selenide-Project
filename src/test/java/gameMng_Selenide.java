@@ -59,7 +59,13 @@ public class gameMng_Selenide {
 	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
 	        WebDriverRunner.setWebDriver(driver);
 	  		driver.manage().window().setSize(new Dimension(1600, 1400));
-  		} 
+  		} else if(browser.equals("edge")) {
+  			TestBrowser = "edge";
+  			cap = DesiredCapabilities.edge();
+	        RemoteWebDriver driver = new RemoteWebDriver(new URL(urlToRemoteWD),cap);
+	        WebDriverRunner.setWebDriver(driver);
+	  		driver.manage().window().setSize(new Dimension(1600, 1400));
+  		}
         startAt = "2017.06.05 00:00:00";
         endAt = "2018.07.01 00:00:00";
         startAt1 = "2017-06-05 00:00:00";

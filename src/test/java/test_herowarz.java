@@ -82,17 +82,6 @@ public class test_herowarz {
 			} 
 		} 
 	}
-  	public static void a123(){
-  		String parentwindow = getWebDriver().getWindowHandle();
-  		Set<String> handles = getWebDriver().getWindowHandles();
-  		for(String childwindow : handles ){
-  			if(!childwindow.equals(parentwindow)){
-  				switchTo().window(childwindow);
-  				close();
-  				switchTo().window(parentwindow);
-  			}
-  		}
-  	}
   	public static void url(String URL) throws Exception {
   		HttpURLConnection huc = null;
   		huc = (HttpURLConnection)(new URL(URL).openConnection());
