@@ -77,10 +77,9 @@ public class gameAccountMng_Selenide {
 	@Test(priority = 0)
 	public void Login() {
         open(baseUrl + "/login/form.ct");
-        $(By.linkText("LDAP")).click();
-        $(By.name("j_username")).setValue("apzz0928");
-        $(By.name("j_password")).setValue("qordlf!@34");
-        $(".uid_ldap_login_submit_btn").click();
+        $(By.name("id")).setValue("apzz0928");
+        $(By.name("password")).setValue("qordlf12");
+        $(".uid_internal_login_submit_btn").click();
         open(baseUrl + "/common/locale/ko");
         System.out.println(TestBrowser + " Login : Pass");
     }
@@ -430,7 +429,7 @@ public class gameAccountMng_Selenide {
         $(".uid_ok_btn").click();
         $(".menu-title").waitUntil(text("전체 메뉴"), 3000);
     }
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void promptTest() throws InterruptedException {
         open("https://rct-d-p.astorm.com/account/gamedata/gameAccountInfo.ct?sk=1&accountKey=56");
         $(".uid_inven_equip_link", 0).click();
@@ -446,6 +445,18 @@ public class gameAccountMng_Selenide {
         Thread.sleep(5000);
         $(".uid_ok_btn").click();
         Thread.sleep(5000);
+    }
+	@Test(priority = 5)
+	public void clan_account() throws InterruptedException {
+        open("https://rct-d-p.astorm.com/clan/clanDetail.ct?sk=1&clan_key=562");
+        $(".uid_add_clan_member_layer_btn").click();
+        for(int i=10500;i<30201;i++){
+        	$(".ac_input", 2).setValue("" + i + "");
+            System.out.println(TestBrowser + " " + i + "입력");
+            $(".uid_add_clan_member_search_btn").click();
+            Thread.sleep(500);
+        }
+
     }
 	@AfterClass
 	public void afterTest() {

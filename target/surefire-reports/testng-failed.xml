@@ -8,4 +8,16 @@
       <class name="gameAccountMng_Selenide"/>
     </classes>
   </test> <!-- internetExplorer Test -->
+  <test name="internetExplorer Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="gameAccountMng_Selenide">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="clan_account"/>
+        </methods>
+      </class> <!-- gameAccountMng_Selenide -->
+    </classes>
+  </test> <!-- internetExplorer Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

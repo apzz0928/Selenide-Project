@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="32.289" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="351.457" tests="2" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="JOB_NAME" value="SelenideProject"/>
@@ -12,7 +12,7 @@
     <property name="POM_ARTIFACTID" value="SelenideProject"/>
     <property name="os.name" value="Windows 10"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
-    <property name="EXECUTOR_NUMBER" value="0"/>
+    <property name="EXECUTOR_NUMBER" value="1"/>
     <property name="sun.desktop" value="windows"/>
     <property name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -26,10 +26,10 @@
     <property name="ProgramFiles" value="C:\Program Files (x86)"/>
     <property name="user.language" value="ko"/>
     <property name="JOB_BASE_NAME" value="SelenideProject"/>
-    <property name="RUN_CHANGES_DISPLAY_URL" value="http://127.0.0.1:81/jenkins/job/SelenideProject/267/display/redirect?page=changes"/>
-    <property name="BUILD_DISPLAY_NAME" value="#267"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://127.0.0.1:81/jenkins/job/SelenideProject/283/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#283"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
-    <property name="GIT_PREVIOUS_SUCCESSFUL_COMMIT" value="22441fb30d207640f5ec0aed43b5f87001835fd9"/>
+    <property name="GIT_PREVIOUS_SUCCESSFUL_COMMIT" value="0a5d92c2c8702146c13d5ac5929a63198aaadc4e"/>
     <property name="LOCALAPPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local"/>
     <property name="java.version" value="1.8.0_131"/>
     <property name="PROCESSOR_LEVEL" value="6"/>
@@ -39,7 +39,7 @@
     <property name="NODE_NAME" value="master"/>
     <property name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
-    <property name="BUILD_ID" value="267"/>
+    <property name="BUILD_ID" value="283"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="MS949"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -55,14 +55,14 @@
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="os.version" value="10.0"/>
-    <property name="RUN_DISPLAY_URL" value="http://127.0.0.1:81/jenkins/job/SelenideProject/267/display/redirect"/>
+    <property name="RUN_DISPLAY_URL" value="http://127.0.0.1:81/jenkins/job/SelenideProject/283/display/redirect"/>
     <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
     <property name="TMP" value="C:\WINDOWS\TEMP"/>
     <property name="GRADLE_OPTS" value="GRADLE_OPTS=-Dfile.encoding=UTF-8"/>
     <property name="path.separator" value=";"/>
     <property name="java.vm.version" value="25.131-b11"/>
     <property name="user.variant" value=""/>
-    <property name="GIT_PREVIOUS_COMMIT" value="22441fb30d207640f5ec0aed43b5f87001835fd9"/>
+    <property name="GIT_PREVIOUS_COMMIT" value="0a5d92c2c8702146c13d5ac5929a63198aaadc4e"/>
     <property name="JOB_DISPLAY_URL" value="http://127.0.0.1:81/jenkins/job/SelenideProject/display/redirect"/>
     <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -78,7 +78,7 @@
     <property name="POM_GROUPID" value="SelenideProject"/>
     <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
-    <property name="BUILD_TAG" value="jenkins-SelenideProject-267"/>
+    <property name="BUILD_TAG" value="jenkins-SelenideProject-283"/>
     <property name="JENKINS_SERVER_COOKIE" value="38a0142a922008e6"/>
     <property name="HUDSON_URL" value="http://127.0.0.1:81/jenkins/"/>
     <property name="ProgramData" value="C:\ProgramData"/>
@@ -92,7 +92,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="maven.home" value="C:\Program Files\apache-maven-3.5.0"/>
     <property name="java.class.path" value="C:\Bitnami\jenkins-2.73.2-0\apps\jenkins\jenkins_home\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.12-alpha-1.jar;C:\Program Files\apache-maven-3.5.0\boot\plexus-classworlds-2.5.2.jar;C:\Program Files\apache-maven-3.5.0/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files\apache-maven-3.5.0 C:\Bitnami\jenkins-2.73.2-0\apache-tomcat\webapps\jenkins\WEB-INF\lib\remoting-3.10.2.jar C:\Bitnami\jenkins-2.73.2-0\apps\jenkins\jenkins_home\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar C:\Bitnami\jenkins-2.73.2-0\apps\jenkins\jenkins_home\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar 52004"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files\apache-maven-3.5.0 C:\Bitnami\jenkins-2.73.2-0\apache-tomcat\webapps\jenkins\WEB-INF\lib\remoting-3.10.2.jar C:\Bitnami\jenkins-2.73.2-0\apps\jenkins\jenkins_home\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar C:\Bitnami\jenkins-2.73.2-0\apps\jenkins\jenkins_home\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar 49649"/>
     <property name="Path" value="C:\Program Files\Java\jdk1.8.0_131/bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_51;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.5.0\bin;C:\Program Files\Git\cmd;F:\sonarqube-6.6\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PROCESSOR_ARCHITECTURE" value="x86"/>
@@ -107,7 +107,7 @@
     <property name="HUDSON_HOME" value="C:\Bitnami\jenkins-2.73.2-0\apps\jenkins\jenkins_home"/>
     <property name="PATH+MAVEN" value="C:\Program Files\apache-maven-3.5.0/bin"/>
     <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
-    <property name="BUILD_URL" value="http://127.0.0.1:81/jenkins/job/SelenideProject/267/"/>
+    <property name="BUILD_URL" value="http://127.0.0.1:81/jenkins/job/SelenideProject/283/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
@@ -120,13 +120,13 @@
     <property name="line.separator" value="&#10;"/>
     <property name="MAVEN_HOME" value="C:\Program Files\apache-maven-3.5.0"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="267"/>
+    <property name="BUILD_NUMBER" value="283"/>
     <property name="JENKINS_URL" value="http://127.0.0.1:81/jenkins/"/>
     <property name="PROCESSOR_REVISION" value="3a09"/>
     <property name="GIT_BRANCH" value="origin/master"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
     <property name="windir" value="C:\WINDOWS"/>
-    <property name="GIT_COMMIT" value="22441fb30d207640f5ec0aed43b5f87001835fd9"/>
+    <property name="GIT_COMMIT" value="0a5d92c2c8702146c13d5ac5929a63198aaadc4e"/>
     <property name="file.encoding" value="MS949"/>
     <property name="SystemDrive" value="C:"/>
     <property name="maven3.interceptor" value="C:\Bitnami\jenkins-2.73.2-0\apps\jenkins\jenkins_home\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar"/>
@@ -136,6 +136,765 @@
     <property name="PSModulePath" value="C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files\WindowsPowerShell\Modules\;C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\ResourceManager\AzureResourceManager\;C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\ServiceManagement\;C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\Storage\"/>
     <property name="GIT_URL" value="https://github.com/apzz0928/SelenideProject.git"/>
   </properties>
-  <testcase name="Login" classname="gameAccountMng_Selenide" time="4.216"/>
-  <testcase name="promptTest" classname="gameAccountMng_Selenide" time="19.141"/>
+  <testcase name="Login" classname="gameAccountMng_Selenide" time="1.573"/>
+  <testcase name="clan_account" classname="gameAccountMng_Selenide" time="340.876">
+    <failure message="Element not found {.ac_input[2]}&#10;Expected: visible" type="com.codeborne.selenide.ex.ElementNotFound">com.codeborne.selenide.ex.ElementNotFound: 
+Element not found {.ac_input[2]}
+Expected: visible
+	at gameAccountMng_Selenide.clan_account(gameAccountMng_Selenide.java:454)
+Caused by: org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+*** Element info: {Using=css selector, value=.ac_input}
+Command duration or timeout: 0 milliseconds
+	at gameAccountMng_Selenide.clan_account(gameAccountMng_Selenide.java:454)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+	at gameAccountMng_Selenide.clan_account(gameAccountMng_Selenide.java:454)
+Caused by: org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+*** Element info: {Using=css selector, value=.ac_input}
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: EventFiringWebDriver
+</failure>
+    <system-out><![CDATA[chrome 10000입력
+chrome 10001입력
+chrome 10002입력
+chrome 10003입력
+chrome 10004입력
+chrome 10005입력
+chrome 10006입력
+chrome 10007입력
+chrome 10008입력
+chrome 10009입력
+chrome 10010입력
+chrome 10011입력
+chrome 10012입력
+chrome 10013입력
+chrome 10014입력
+chrome 10015입력
+chrome 10016입력
+chrome 10017입력
+chrome 10018입력
+chrome 10019입력
+chrome 10020입력
+chrome 10021입력
+chrome 10022입력
+chrome 10023입력
+chrome 10024입력
+chrome 10025입력
+chrome 10026입력
+chrome 10027입력
+chrome 10028입력
+chrome 10029입력
+chrome 10030입력
+chrome 10031입력
+chrome 10032입력
+chrome 10033입력
+chrome 10034입력
+chrome 10035입력
+chrome 10036입력
+chrome 10037입력
+chrome 10038입력
+chrome 10039입력
+chrome 10040입력
+chrome 10041입력
+chrome 10042입력
+chrome 10043입력
+chrome 10044입력
+chrome 10045입력
+chrome 10046입력
+chrome 10047입력
+chrome 10048입력
+chrome 10049입력
+chrome 10050입력
+chrome 10051입력
+chrome 10052입력
+chrome 10053입력
+chrome 10054입력
+chrome 10055입력
+chrome 10056입력
+chrome 10057입력
+chrome 10058입력
+chrome 10059입력
+chrome 10060입력
+chrome 10061입력
+chrome 10062입력
+chrome 10063입력
+chrome 10064입력
+chrome 10065입력
+chrome 10066입력
+chrome 10067입력
+chrome 10068입력
+chrome 10069입력
+chrome 10070입력
+chrome 10071입력
+chrome 10072입력
+chrome 10073입력
+chrome 10074입력
+chrome 10075입력
+chrome 10076입력
+chrome 10077입력
+chrome 10078입력
+chrome 10079입력
+chrome 10080입력
+chrome 10081입력
+chrome 10082입력
+chrome 10083입력
+chrome 10084입력
+chrome 10085입력
+chrome 10086입력
+chrome 10087입력
+chrome 10088입력
+chrome 10089입력
+chrome 10090입력
+chrome 10091입력
+chrome 10092입력
+chrome 10093입력
+chrome 10094입력
+chrome 10095입력
+chrome 10096입력
+chrome 10097입력
+chrome 10098입력
+chrome 10099입력
+chrome 10100입력
+chrome 10101입력
+chrome 10102입력
+chrome 10103입력
+chrome 10104입력
+chrome 10105입력
+chrome 10106입력
+chrome 10107입력
+chrome 10108입력
+chrome 10109입력
+chrome 10110입력
+chrome 10111입력
+chrome 10112입력
+chrome 10113입력
+chrome 10114입력
+chrome 10115입력
+chrome 10116입력
+chrome 10117입력
+chrome 10118입력
+chrome 10119입력
+chrome 10120입력
+chrome 10121입력
+chrome 10122입력
+chrome 10123입력
+chrome 10124입력
+chrome 10125입력
+chrome 10126입력
+chrome 10127입력
+chrome 10128입력
+chrome 10129입력
+chrome 10130입력
+chrome 10131입력
+chrome 10132입력
+chrome 10133입력
+chrome 10134입력
+chrome 10135입력
+chrome 10136입력
+chrome 10137입력
+chrome 10138입력
+chrome 10139입력
+chrome 10140입력
+chrome 10141입력
+chrome 10142입력
+chrome 10143입력
+chrome 10144입력
+chrome 10145입력
+chrome 10146입력
+chrome 10147입력
+chrome 10148입력
+chrome 10149입력
+chrome 10150입력
+chrome 10151입력
+chrome 10152입력
+chrome 10153입력
+chrome 10154입력
+chrome 10155입력
+chrome 10156입력
+chrome 10157입력
+chrome 10158입력
+chrome 10159입력
+chrome 10160입력
+chrome 10161입력
+chrome 10162입력
+chrome 10163입력
+chrome 10164입력
+chrome 10165입력
+chrome 10166입력
+chrome 10167입력
+chrome 10168입력
+chrome 10169입력
+chrome 10170입력
+chrome 10171입력
+chrome 10172입력
+chrome 10173입력
+chrome 10174입력
+chrome 10175입력
+chrome 10176입력
+chrome 10177입력
+chrome 10178입력
+chrome 10179입력
+chrome 10180입력
+chrome 10181입력
+chrome 10182입력
+chrome 10183입력
+chrome 10184입력
+chrome 10185입력
+chrome 10186입력
+chrome 10187입력
+chrome 10188입력
+chrome 10189입력
+chrome 10190입력
+chrome 10191입력
+chrome 10192입력
+chrome 10193입력
+chrome 10194입력
+chrome 10195입력
+chrome 10196입력
+chrome 10197입력
+chrome 10198입력
+chrome 10199입력
+chrome 10200입력
+chrome 10201입력
+chrome 10202입력
+chrome 10203입력
+chrome 10204입력
+chrome 10205입력
+chrome 10206입력
+chrome 10207입력
+chrome 10208입력
+chrome 10209입력
+chrome 10210입력
+chrome 10211입력
+chrome 10212입력
+chrome 10213입력
+chrome 10214입력
+chrome 10215입력
+chrome 10216입력
+chrome 10217입력
+chrome 10218입력
+chrome 10219입력
+chrome 10220입력
+chrome 10221입력
+chrome 10222입력
+chrome 10223입력
+chrome 10224입력
+chrome 10225입력
+chrome 10226입력
+chrome 10227입력
+chrome 10228입력
+chrome 10229입력
+chrome 10230입력
+chrome 10231입력
+chrome 10232입력
+chrome 10233입력
+chrome 10234입력
+chrome 10235입력
+chrome 10236입력
+chrome 10237입력
+chrome 10238입력
+chrome 10239입력
+chrome 10240입력
+chrome 10241입력
+chrome 10242입력
+chrome 10243입력
+chrome 10244입력
+chrome 10245입력
+chrome 10246입력
+chrome 10247입력
+chrome 10248입력
+chrome 10249입력
+chrome 10250입력
+chrome 10251입력
+chrome 10252입력
+chrome 10253입력
+chrome 10254입력
+chrome 10255입력
+chrome 10256입력
+chrome 10257입력
+chrome 10258입력
+chrome 10259입력
+chrome 10260입력
+chrome 10261입력
+chrome 10262입력
+chrome 10263입력
+chrome 10264입력
+chrome 10265입력
+chrome 10266입력
+chrome 10267입력
+chrome 10268입력
+chrome 10269입력
+chrome 10270입력
+chrome 10271입력
+chrome 10272입력
+chrome 10273입력
+chrome 10274입력
+chrome 10275입력
+chrome 10276입력
+chrome 10277입력
+chrome 10278입력
+chrome 10279입력
+chrome 10280입력
+chrome 10281입력
+chrome 10282입력
+chrome 10283입력
+chrome 10284입력
+chrome 10285입력
+chrome 10286입력
+chrome 10287입력
+chrome 10288입력
+chrome 10289입력
+chrome 10290입력
+chrome 10291입력
+chrome 10292입력
+chrome 10293입력
+chrome 10294입력
+chrome 10295입력
+chrome 10296입력
+chrome 10297입력
+chrome 10298입력
+chrome 10299입력
+chrome 10300입력
+chrome 10301입력
+chrome 10302입력
+chrome 10303입력
+chrome 10304입력
+chrome 10305입력
+chrome 10306입력
+chrome 10307입력
+chrome 10308입력
+chrome 10309입력
+chrome 10310입력
+chrome 10311입력
+chrome 10312입력
+chrome 10313입력
+chrome 10314입력
+chrome 10315입력
+chrome 10316입력
+chrome 10317입력
+chrome 10318입력
+chrome 10319입력
+chrome 10320입력
+chrome 10321입력
+chrome 10322입력
+chrome 10323입력
+chrome 10324입력
+chrome 10325입력
+chrome 10326입력
+chrome 10327입력
+chrome 10328입력
+chrome 10329입력
+chrome 10330입력
+chrome 10331입력
+chrome 10332입력
+chrome 10333입력
+chrome 10334입력
+chrome 10335입력
+chrome 10336입력
+chrome 10337입력
+chrome 10338입력
+chrome 10339입력
+chrome 10340입력
+chrome 10341입력
+chrome 10342입력
+chrome 10343입력
+chrome 10344입력
+chrome 10345입력
+chrome 10346입력
+chrome 10347입력
+chrome 10348입력
+chrome 10349입력
+chrome 10350입력
+chrome 10351입력
+chrome 10352입력
+chrome 10353입력
+chrome 10354입력
+chrome 10355입력
+chrome 10356입력
+chrome 10357입력
+chrome 10358입력
+chrome 10359입력
+chrome 10360입력
+chrome 10361입력
+chrome 10362입력
+chrome 10363입력
+chrome 10364입력
+chrome 10365입력
+chrome 10366입력
+chrome 10367입력
+chrome 10368입력
+chrome 10369입력
+chrome 10370입력
+chrome 10371입력
+chrome 10372입력
+chrome 10373입력
+chrome 10374입력
+chrome 10375입력
+chrome 10376입력
+chrome 10377입력
+chrome 10378입력
+chrome 10379입력
+chrome 10380입력
+chrome 10381입력
+chrome 10382입력
+chrome 10383입력
+chrome 10384입력
+chrome 10385입력
+chrome 10386입력
+chrome 10387입력
+chrome 10388입력
+chrome 10389입력
+chrome 10390입력
+chrome 10391입력
+chrome 10392입력
+chrome 10393입력
+chrome 10394입력
+chrome 10395입력
+chrome 10396입력
+chrome 10397입력
+chrome 10398입력
+chrome 10399입력
+chrome 10400입력
+chrome 10401입력
+chrome 10402입력
+chrome 10403입력
+chrome 10404입력
+chrome 10405입력
+chrome 10406입력
+chrome 10407입력
+chrome 10408입력
+chrome 10409입력
+chrome 10410입력
+chrome 10411입력
+chrome 10412입력
+chrome 10413입력
+chrome 10414입력
+chrome 10415입력
+chrome 10416입력
+chrome 10417입력
+chrome 10418입력
+chrome 10419입력
+chrome 10420입력
+chrome 10421입력
+chrome 10422입력
+chrome 10423입력
+chrome 10424입력
+chrome 10425입력
+chrome 10426입력
+chrome 10427입력
+chrome 10428입력
+chrome 10429입력
+chrome 10430입력
+chrome 10431입력
+chrome 10432입력
+chrome 10433입력
+chrome 10434입력
+chrome 10435입력
+chrome 10436입력
+chrome 10437입력
+chrome 10438입력
+chrome 10439입력
+chrome 10440입력
+chrome 10441입력
+chrome 10442입력
+chrome 10443입력
+chrome 10444입력
+chrome 10445입력
+chrome 10446입력
+chrome 10447입력
+chrome 10448입력
+chrome 10449입력
+chrome 10450입력
+chrome 10451입력
+chrome 10452입력
+chrome 10453입력
+chrome 10454입력
+chrome 10455입력
+chrome 10456입력
+chrome 10457입력
+chrome 10458입력
+chrome 10459입력
+chrome 10460입력
+chrome 10461입력
+chrome 10462입력
+chrome 10463입력
+chrome 10464입력
+chrome 10465입력
+chrome 10466입력
+chrome 10467입력
+chrome 10468입력
+chrome 10469입력
+chrome 10470입력
+chrome 10471입력
+chrome 10472입력
+chrome 10473입력
+chrome 10474입력
+chrome 10475입력
+chrome 10476입력
+chrome 10477입력
+chrome 10478입력
+chrome 10479입력
+chrome 10480입력
+chrome 10481입력
+chrome 10482입력
+chrome 10483입력
+chrome 10484입력
+chrome 10485입력
+chrome 10486입력
+chrome 10487입력
+chrome 10488입력
+chrome 10489입력
+chrome 10490입력
+chrome 10491입력
+chrome 10492입력
+chrome 10493입력
+chrome 10494입력
+chrome 10495입력
+chrome 10496입력
+chrome 10497입력
+chrome 10498입력
+chrome 10499입력
+chrome 10500입력
+]]></system-out>
+    <system-err><![CDATA[11월 20, 2017 3:00:39 오후 com.codeborne.selenide.impl.ScreenShotLaboratory printOnce
+심각: chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+Command duration or timeout: 0 milliseconds
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+Command duration or timeout: 0 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.getPageSource(RemoteWebDriver.java:468)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.savePageSourceToFile(ScreenShotLaboratory.java:211)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.savePageSourceToFile(ScreenShotLaboratory.java:204)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenShot(ScreenShotLaboratory.java:103)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenShot(ScreenShotLaboratory.java:80)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.formatScreenShotPath(ScreenShotLaboratory.java:343)
+	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:65)
+	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:59)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:72)
+	at com.sun.proxy.$Proxy10.setValue(Unknown Source)
+	at gameAccountMng_Selenide.clan_account(gameAccountMng_Selenide.java:454)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:140)
+	... 44 more
+Caused by: org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver.getPageSource(RemoteWebDriver.java:519)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy10.getPageSource(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.getPageSource(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.remote.server.handler.GetPageSource.call(GetPageSource.java:30)
+	at org.openqa.selenium.remote.server.handler.GetPageSource.call(GetPageSource.java:22)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11월 20, 2017 3:00:43 오후 com.codeborne.selenide.impl.ScreenShotLaboratory printOnce
+심각: chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+Command duration or timeout: 0 milliseconds
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+Command duration or timeout: 0 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:328)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenshotImage(ScreenShotLaboratory.java:251)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.savePageImageToFile(ScreenShotLaboratory.java:180)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenShot(ScreenShotLaboratory.java:106)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenShot(ScreenShotLaboratory.java:80)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.formatScreenShotPath(ScreenShotLaboratory.java:343)
+	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:65)
+	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:59)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:72)
+	at com.sun.proxy.$Proxy10.setValue(Unknown Source)
+	at gameAccountMng_Selenide.clan_account(gameAccountMng_Selenide.java:454)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.server.handler.CaptureScreenshot.call(CaptureScreenshot.java:36)
+	at org.openqa.selenium.remote.server.handler.CaptureScreenshot.call(CaptureScreenshot.java:26)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11월 20, 2017 3:00:48 오후 com.codeborne.selenide.Selenide getJavascriptErrors
+경고: org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'APZZ0928-PC', ip: '10.10.105.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir11440_64}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0489d9d54717f58dccc3f9f1707edb76
+Command duration or timeout: 0 milliseconds
+]]></system-err>
+  </testcase>
 </testsuite>
