@@ -446,11 +446,11 @@ public class gameAccountMng_Selenide {
         $(".uid_ok_btn").click();
         Thread.sleep(5000);
     }
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void clan_account() throws InterruptedException {
         open("https://rct-d-p.astorm.com/clan/clanDetail.ct?sk=1&clan_key=562");
         $(".uid_add_clan_member_layer_btn").click();
-        for(int i=10500;i<30201;i++){
+        for(int i=20000;i<30201;i++){
         	$(".ac_input", 2).setValue("" + i + "");
             System.out.println(TestBrowser + " " + i + "ют╥б");
             $(".uid_add_clan_member_search_btn").click();
@@ -458,6 +458,34 @@ public class gameAccountMng_Selenide {
         }
 
     }
+	//@Test(priority = 6)
+	public void clan_expel() {
+        open("https://rct-d-p.astorm.com/clan/clanDetail.ct?sk=1&clan_key=322");
+        for(int i=0;i<=25;i++){
+            $(".uid_expel_btn", 0).click();
+            $(".uid_ok_btn").click();
+            refresh();
+        }
+    }	
+	@Test(priority = 7)
+	public void clan_add() {
+		String ak[];
+		ak = new String[25];
+		ak[0]="333"; ak[1]="444"; ak[2]="504"; ak[3]="518"; ak[4]="560"; ak[5]="1111"; ak[6]="1234"; ak[7]="1319"; 
+		ak[8]="1322"; ak[9]="10021"; ak[10]="10081"; ak[11]="10089"; ak[12]="10110"; ak[13]="10119"; ak[14]="10245"; 
+		ak[15]="10381"; ak[16]="10382"; ak[17]="10409"; ak[18]="10501"; ak[19]="10502"; ak[20]="10514";
+		ak[21]="10503"; ak[22]="10516"; ak[23]="10518"; ak[24]="10712";
+        open("https://rct-d-p.astorm.com/clan/clanDetail.ct?sk=1&clan_key=322");
+        for(int i=0;i<ak.length;i++){
+        	$(".uid_add_clan_member_layer_btn").click();
+            $(".ac_input", 2).setValue(ak[i]);
+            System.out.println(ak[i]);
+            $(".uid_add_clan_member_search_btn").click();
+            $(".uid_add_clan_member_btn").click();
+            $(".uid_ok_btn").click();
+            refresh();
+        }
+    }	
 	@AfterClass
 	public void afterTest() {
 		closeWebDriver();

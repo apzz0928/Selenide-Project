@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
-  <parameter name="browser" value="chrome"/>
+  <parameter name="browser" value="firefox"/>
   <test name="internetExplorer Test">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="gameAccountMng_Selenide"/>
     </classes>
   </test> <!-- internetExplorer Test -->
-  <test name="internetExplorer Test(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="gameAccountMng_Selenide">
-        <methods>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="clan_account"/>
-        </methods>
-      </class> <!-- gameAccountMng_Selenide -->
-    </classes>
-  </test> <!-- internetExplorer Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

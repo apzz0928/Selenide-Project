@@ -237,7 +237,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " mailout : Pass");
     }
-	//@Test(priority = 7)
+	@Test(priority = 7)
 	public void burningEvent() {
 		open(baseUrl + "/event/burning/list.ct");
 		$(By.linkText("추가")).click();
@@ -346,7 +346,7 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 3000);
 		System.out.println(TestBrowser + " onlineUser : Pass");
     }
-	@Test(priority = 12)
+//	@Test(priority = 12)
 	public void slangWord() {
 		open(baseUrl + "/gmcmd/slangForm.ct");
 		slang("명명 금칙어");
@@ -399,6 +399,11 @@ public class gameMng_Selenide {
 		$(".menu-title").waitUntil(text("전체 메뉴"), 10000);
 		System.out.println(TestBrowser + " pvpSchedule : Pass");
     }
+	@Test(priority = 14)
+	public void logout() {
+		open(baseUrl);
+		$(".btn-logout").click();
+	}
 	@AfterClass
 	public void afterTest() {
 		closeWebDriver();
